@@ -2,6 +2,17 @@
 
 A starter for Vue and Webpack, Hot-reload, PostCSS, Build tools.
 
+## Cli tool
+
+Use [VuePack Cli](https://github.com/egoist/vuepack-cli) to generate a new project:
+
+```bash
+npm install -g vuepack
+vue init hello-vue
+cd hello-vue
+npm run dev
+```
+
 ## Usage
 
 |Command|Description|
