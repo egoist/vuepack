@@ -1,5 +1,6 @@
 <template>
   <div>
+    <star></star>
     <counter></counter>
   </div>
 
@@ -8,7 +9,8 @@
 <script>
   export default {
     components: {
-      counter: require('../components/counter')
+      counter: require('../components/counter'),
+      star: require('../components/star')
     }
   }
 </script>
