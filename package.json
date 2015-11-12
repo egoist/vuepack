@@ -1,13 +1,14 @@
 {
   "name": "vuepack",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Vue and Webpack with hot-reload PostCSS scaffolding",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development HOT=1 node scripts/devServer.js",
     "build": "rm -rf ./build && webpack -p --config scripts/webpack.config.prod.js",
-    "publish:demo": "npm run build && surge -d vuepack.surge.sh -p build"
+    "publish:demo": "npm run build && surge -d vuepack.surge.sh -p build",
+    "dev:win": "set NODE_ENV=development && set HOT=1 && node scripts/devServer.js"
   },
   "repository": {
     "type": "git",
