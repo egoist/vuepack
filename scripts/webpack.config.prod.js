@@ -48,7 +48,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: './index.html',
-      title: 'VuePack'
+      title: 'VuePack',
+      template: __dirname + '/index.template'
     })
   ],
   babel: {

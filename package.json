@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development HOT=1 node scripts/devServer.js",
-    "build": "rm -rf ./build && webpack -p --config scripts/webpack.config.prod.js"
+    "build": "rm -rf ./build && webpack -p --config scripts/webpack.config.prod.js",
+    "publish:demo": "npm run build && surge -d vuepack.surge.sh -p build"
   },
   "repository": {
     "type": "git",
