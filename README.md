@@ -9,6 +9,8 @@ Use [VuePack Cli](https://github.com/egoist/vuepack-cli) to generate a new proje
 ```bash
 npm install -g vuepack
 vue init hello-vue
+# or if you are located in China
+# vue init hello-vue --cn
 cd hello-vue
 npm run dev
 ```
