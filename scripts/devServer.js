@@ -22,10 +22,11 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '../', 'index.hot.html'))
 })
 
-app.listen(3030, 'localhost', function(err) {
+app.set('port', process.env.VUEPACK_PORT || 3000)
+app.listen(app.get('port'), 'localhost', function(err) {
   if (err) {
     console.log(err)
     return
   }
-  console.log('Listening at http://localhost:3030')
+  console.log('Listening at http://localhost:' + app.get('port'))
 })
