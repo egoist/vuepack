@@ -2,7 +2,7 @@
 
 A starter for Vue and Webpack, Hot-reload, PostCSS, Build tools.
 
->Note that Node 5(with NPM 3) or above is highly recommended for a faster installing speed(especially for Babel 6) and preventing from unknown issues. 
+>Note that Node 5(with NPM 3) or above is highly recommended for a faster installing speed(especially for Babel 6) and preventing from unknown issues.
 
 ## Cli tool
 
@@ -15,6 +15,7 @@ vue init hello-vue
 # vue init hello-vue --cn
 cd hello-vue
 npm run dev
+# wait for webpack to bundle then go to http://localhost:3030
 ```
 
 ## Usage
