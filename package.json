@@ -1,6 +1,6 @@
 {
   "name": "vuepack",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Vue and Webpack with hot-reload PostCSS scaffolding",
   "main": "index.js",
   "scripts": {
@@ -41,6 +41,9 @@
     "html-webpack-plugin": "^1.6.2",
     "postcss-loader": "^0.7.0",
     "postcss-nested": "^1.0.0",
+    "redux": "^3.0.4",
+    "redux-devtools": "^2.1.5",
+    "revue": "^1.2.0",
     "style-loader": "^0.13.0",
     "vue": "^1.0.7",
     "vue-hot-reload-api": "^1.2.1",

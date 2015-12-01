@@ -29,12 +29,15 @@
   export default {
     data () {
       return {
-        count: 1
+        count: this.$revue.getState().counter
       }
+    },
+    ready () {
+      this.$subscribe('counter as count')
     },
     methods: {
       handleClick () {
-        this.count++
+        this.$revue.dispatch({type: 'INCREMENT'})
       }
     }
   }
