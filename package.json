@@ -1,6 +1,6 @@
 {
   "name": "vuepack",
-  "version": "0.0.33",
+  "version": "0.0.34",
   "description": "Vue and Webpack with hot-reload PostCSS scaffolding",
   "main": "index.js",
   "scripts": {

@@ -4,6 +4,7 @@
     margin: 0;
     text-align: center;
     padding-top: 100px;
+    font: 14px/1.4 Helvetica;
   }
   h1 {
     font-size: 70px;

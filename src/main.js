@@ -12,6 +12,9 @@ const router = new VueRouter()
 router.map({
   '/': {
     component: require('./views/home')
+  },
+  '/about': {
+    component: require('./views/about')
   }
 })
 
