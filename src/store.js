@@ -1,11 +1,14 @@
-import { applyMiddleware, createStore, compose } from 'redux'
+/* global __DEV__ */
+import { createStore, compose } from 'redux'
+// import { applyMiddleware, createStore, compose } from 'redux'
 import rootReducer from './reducers'
 
-let finalCreateStore, store
+let finalCreateStore
+let store
 if (__DEV__) {
   const { devTools, persistState } = require('redux-devtools')
   finalCreateStore = compose(
-    //applyMiddleware(m1, m2, m3 ...),
+    // applyMiddleware(m1, m2, m3 ...),
     devTools(),
     persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/))
   )(createStore)

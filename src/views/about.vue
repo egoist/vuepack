@@ -52,10 +52,10 @@ npm run dev
     },
     methods: {
       addUser () {
-        if (!this.name)
-          return
-        this.$revue.dispatch({type: 'ADD_USER', name: this.name})
-        this.name = ''
+        if (this.name) {
+          this.$revue.dispatch({ type: 'ADD_USER', name: this.name })
+          this.name = ''
+        }
       }
     }
   }

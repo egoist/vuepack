@@ -1,3 +1,4 @@
+/* global __DEV__ */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Revue from 'revue'

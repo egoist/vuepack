@@ -38,7 +38,7 @@
     },
     methods: {
       handleClick () {
-        this.$revue.dispatch({type: 'INCREMENT'})
+        this.$revue.dispatch({ type: 'INCREMENT' })
       }
     }
   }

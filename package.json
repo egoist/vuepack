@@ -1,6 +1,6 @@
 {
   "name": "vuepack",
-  "version": "0.0.35",
+  "version": "0.0.4",
   "description": "Vue and Webpack with hot-reload PostCSS scaffolding",
   "main": "index.js",
   "scripts": {
@@ -31,12 +31,16 @@
   "homepage": "https://github.com/egoist/vuepack#readme",
   "devDependencies": {
     "babel-core": "^6.1.4",
+    "babel-eslint": "^4.1.6",
     "babel-loader": "^6.1.0",
     "babel-plugin-transform-runtime": "^6.1.4",
     "babel-preset-es2015": "^6.1.4",
     "babel-preset-stage-0": "^6.1.2",
     "babel-runtime": "^6.1.4",
     "css-loader": "^0.21.0",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.0.0",
+    "eslint-loader": "^1.1.1",
     "express": "^4.13.3",
     "html-webpack-plugin": "^1.6.2",
     "postcss-loader": "^0.7.0",
