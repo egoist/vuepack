@@ -6,6 +6,8 @@ A starter for Vue and Webpack, Hot-reload, PostCSS, Redux, Revue, Redux-Devtools
 
 ## Cli tool
 
+![preview](http://ww4.sinaimg.cn/large/a15b4afegw1eynsfgjmlqj20qo0f0wgu)
+
 Use [VuePack Cli](https://github.com/egoist/vuepack-cli) to generate a new project:
 
 ```bash
