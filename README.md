@@ -28,6 +28,10 @@ npm run dev
 |npm run dev:win|Run dev server on Win32 platform|
 |npm run build|Build assets for production use, dumped in `./build`|
 
+## TODO
+
+VuePack will stay simple for a while, but eventually its goal is to be a Rails-like tool for Vue. Cuz it's definitely a waste of time to configure things, especially front-end stuffs.
+
 ## License
 
 MIT.
