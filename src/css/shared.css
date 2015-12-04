@@ -1,0 +1,9 @@
+body {
+  background-color: #f0f0f0;
+  margin: 0;
+  font: 14px/1.4 Helvetica;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}

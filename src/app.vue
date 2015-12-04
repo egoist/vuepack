@@ -1,19 +1,22 @@
-<style>
-  body {
-    background-color: #f0f0f0;
-    margin: 0;
-    text-align: center;
-    padding-top: 100px;
-    font: 14px/1.4 Helvetica;
-  }
-  h1 {
-    font-size: 70px;
-  }
-</style>
+<style src="./css/shared.css"></style>
+<style src="./css/app.css"></style>
 
 <template>
   <div id="app">
+    <star></star>
     <h1>VuePack</h1>
+    <nav>
+      <a v-link="{path: '/'}">Home</a>
+      <a v-link="{path: '/about'}">About</a>
+    </nav>
     <router-view></router-view>
   </div>
 </template>
+
+<script>
+  export default {
+    components: {
+      star: require('./components/star')
+    }
+  }
+</script>
