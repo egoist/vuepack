@@ -14,7 +14,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/, loaders: ['babel', 'eslint'],
+        test: /\.js$/, loaders: ['babel'],
         exclude: [/node_modules/]
       },
       {
@@ -26,7 +26,7 @@ module.exports = {
   vue: {
     loaders: {
       css: 'style!css!postcss',
-      js: 'babel!eslint'
+      js: 'babel'
     }
   },
   postcss: function () {
