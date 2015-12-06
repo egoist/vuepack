@@ -1,23 +1,25 @@
 /* global __DEV__ */
-import { createStore, compose } from 'redux'
-// import { applyMiddleware, createStore, compose } from 'redux'
+import { applyMiddleware, createStore, compose } from 'redux'
 import rootReducer from './reducers'
+import thunk from 'redux-thunk'
 
 let finalCreateStore
 let store
 if (__DEV__) {
   const { devTools, persistState } = require('redux-devtools')
   finalCreateStore = compose(
-    // applyMiddleware(m1, m2, m3 ...),
+    applyMiddleware(
+      thunk
+    ),
     devTools(),
     persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/))
   )(createStore)
   store = finalCreateStore(rootReducer)
 } else {
-  // in production if you want middlewares
-  // finalCreateStore = applyMiddleware(...middleware)(createStore)
-  // store = finalCreateStore(rootReducer)
-  store = createStore(rootReducer)
+  finalCreateStore = applyMiddleware(
+    thunk
+  )(createStore)
+  store = finalCreateStore(rootReducer)
 }
 
 function configureStore () {

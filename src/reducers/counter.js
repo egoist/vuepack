@@ -1,7 +1,7 @@
 export default function (counter = 0, action) {
   switch (action.type) {
     case 'INCREMENT':
-      return counter + 2
+      return counter + 1
     default:
       return counter
   }
