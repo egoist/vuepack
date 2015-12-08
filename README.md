@@ -2,8 +2,6 @@
 
 A starter for Vue and Webpack, Hot-reload, PostCSS, Redux, Revue, Redux-Devtools, Build tools.
 
->Note that Node 5(with NPM 3) or above is highly recommended for a faster installing speed(especially for Babel 6) and preventing from unknown issues.
-
 ## Cli tool
 
 ![preview](http://ww4.sinaimg.cn/large/a15b4afegw1eynsfgjmlqj20qo0f0wgu)
