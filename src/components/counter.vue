@@ -12,6 +12,7 @@
     text-align: center;
     line-height: 200px;
     border: 1px solid #e2e2e2;
+    user-select: none;
     cursor: pointer;
     &:hover {
       transform: translateY(-4px);
