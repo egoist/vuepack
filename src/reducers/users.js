@@ -5,7 +5,7 @@ const defaultUsers = [
 export default function (users = defaultUsers, action) {
   switch (action.type) {
     case 'ADD_USER':
-      return users.concat([action.name])
+      return [...users, action.name]
     default:
       return users
   }
