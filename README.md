@@ -1,6 +1,19 @@
 # VuePack
 
-A starter for Vue and Webpack, Hot-reload, PostCSS, Redux, Revue, Redux-Devtools, Build tools.
+![tag](https://img.shields.io/github/tag/egoist/vuepack.svg)
+![gitter](https://img.shields.io/gitter/room/egoist/vuepack.svg)
+![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg)
+
+## Technologies
+
+- Vue
+- Webpack
+- Babel 6
+- Redux
+- Vue-Router
+- Hot reloading
+- PostCSS
+- Autoprefixer
 
 ## Cli tool
 
@@ -28,10 +41,6 @@ npm run dev
 |npm run dev:win|Run dev server on Win32 platform|
 |npm run build|Build assets for production use, dumped in `./build`|
 
-## TODO
-
-VuePack will stay simple for a while, but eventually its goal is to be a Rails-like tool for Vue. Cuz it's definitely a waste of time to configure things, especially front-end stuffs.
-
 ## License
 
-MIT.
+MIT &copy; [EGOIST](https://github.com/egoist)

@@ -24,12 +24,11 @@ module.exports = {
     ]
   },
   vue: {
-    loaders: {
-      css: 'style!css',
-      js: 'babel'
-    },
     postcss:[
-      require('postcss-nested')()
+      require('precss'),
+      require('autoprefixer')({
+        browsers: ['last 2 versions', 'ie > 8']
+      })
     ]
   },
   plugins: [
