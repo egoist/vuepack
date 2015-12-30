@@ -1,5 +1,7 @@
 # VuePack
 
+[![Join the chat at https://gitter.im/egoist/vuepack](https://badges.gitter.im/egoist/vuepack.svg)](https://gitter.im/egoist/vuepack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ![tag](https://img.shields.io/github/tag/egoist/vuepack.svg)
 ![gitter](https://img.shields.io/gitter/room/egoist/vuepack.svg)
 ![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg)
