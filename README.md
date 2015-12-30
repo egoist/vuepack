@@ -1,7 +1,7 @@
 # VuePack
 
-![tag](https://img.shields.io/github/tag/egoist/vuepack.svg)
-![gitter](https://img.shields.io/gitter/room/egoist/vuepack.svg)
+[![release](https://img.shields.io/github/release/egoist/vuepack.svg)](https://github.com/egoist/vuepack/releases)
+[![Join the chat at https://gitter.im/egoist/vuepack](https://badges.gitter.im/egoist/vuepack.svg)](https://gitter.im/egoist/vuepack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg)
 
 ## Technologies
