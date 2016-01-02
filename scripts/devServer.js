@@ -18,10 +18,6 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler))
 
-app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, '../', 'index.hot.html'))
-})
-
 app.set('port', process.env.VUEPACK_PORT || 3000)
 app.listen(app.get('port'), 'localhost', function(err) {
   if (err) {
