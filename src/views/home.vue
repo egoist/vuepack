@@ -1,15 +1,11 @@
 <template>
-  <div>
-    <star></star>
-    <counter></counter>
-  </div>
+  <todo-section></todo-section>
 </template>
 
 <script>
   export default {
     components: {
-      counter: require('../components/counter'),
-      star: require('../components/star')
+      todoSection: require('../components/todoSection')
     }
   }
 </script>

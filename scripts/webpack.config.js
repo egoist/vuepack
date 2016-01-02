@@ -9,7 +9,7 @@ module.exports = {
     publicPath: '/build/'
   },
   resolve: {
-    extensions: ['', '.js', '.vue']
+    extensions: ['', '.js', '.vue', '.css']
   },
   module: {
     loaders: [
@@ -26,8 +26,11 @@ module.exports = {
   vue: {
     postcss:[
       require('precss'),
-      require('autoprefixer')({
-        browsers: ['last 2 versions', 'ie > 8']
+      require('rucksack-css')({
+        autoprefixer: {
+            browsers: ['last 2 versions', 'ie > 8']
+            fallbacks: true
+        }
       })
     ]
   },

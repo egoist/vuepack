@@ -1,0 +1,23 @@
+.filters {
+  margin-top: 20px;
+}
+
+.filter {
+  float: left;
+  font-size: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid #e2e2e2;
+  &.active {
+    border-color: #4078c0;
+    color: #4078c0;
+  }
+  &:hover {
+    color: #4078c0;
+  }
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}

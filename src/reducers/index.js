@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import counter from './counter'
-import users from './users'
+import todos from './todos'
+import todoFilter from './todoFilter'
 
 export default combineReducers({
-  counter,
-  users
+  todos,
+  todoFilter
 })
