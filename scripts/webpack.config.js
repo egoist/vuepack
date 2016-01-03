@@ -1,6 +1,5 @@
 var webpack = require('webpack')
 var path = require('path')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -26,9 +25,6 @@ module.exports = {
     ]
   },
   vue: {
-    loaders: {
-        //css: ExtractTextPlugin.extract('style-loader', 'css-loader')
-    },
     postcss:[
       require('precss'),
       require('rucksack-css')({
@@ -44,8 +40,7 @@ module.exports = {
         filename: './index.html',
         title: 'VuePack',
         template: __dirname + '/index.html'
-    }),
-    //new ExtractTextPlugin('styles.[contenthash].css')
+    })
   ],
   babel: {
     presets: ['es2015', 'stage-0'],

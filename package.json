@@ -1,6 +1,6 @@
 {
   "name": "vuepack-template",
-  "version": "0.1.1",
+  "version": "0.1.11",
   "description": "Vue and Webpack with hot-reload PostCSS scaffolding",
   "main": "index.js",
   "scripts": {
