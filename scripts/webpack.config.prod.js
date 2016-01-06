@@ -18,7 +18,7 @@ config.plugins = [
     compressor: {
       warnings: false
     }
-  })，
+  }),
   new ExtractTextPlugin('styles.[contenthash].css')
 ].concat(config.plugins)
 config.vue.loaders = {
