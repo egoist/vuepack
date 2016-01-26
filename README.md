@@ -1,3 +1,5 @@
+If you want to build a Vue app really really fast, use nether [VuePack](https://github.com/egoist/vuepack) nor  [Vue-cli](https://github.com/vuejs/vue-cli), these scaffoling won't help a lot, they just teach you how to configure things. Try using [Tooling](https://github.com/egoist/tooling) now, which means no setup for you to start an Vue/React app.
+
 # VuePack
 
 [![release](https://img.shields.io/github/release/egoist/vuepack.svg)](https://github.com/egoist/vuepack/releases)
