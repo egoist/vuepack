@@ -25,14 +25,9 @@ module.exports = {
     ]
   },
   vue: {
+    autoprefixer: false,
     postcss:[
-      require('precss'),
-      require('rucksack-css')({
-        autoprefixer: {
-            browsers: ['last 2 versions', 'ie > 8'],
-            fallbacks: true
-        }
-      })
+      require('postcss-cssnext')()
     ]
   },
   plugins: [

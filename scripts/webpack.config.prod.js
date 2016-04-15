@@ -19,7 +19,7 @@ config.plugins = [
       warnings: false
     }
   }),
-  new ExtractTextPlugin('styles.[contenthash].css')
+  new ExtractTextPlugin('[name].[contenthash].css')
 ].concat(config.plugins)
 config.vue.loaders = {
   css: ExtractTextPlugin.extract('style-loader', 'css-loader')

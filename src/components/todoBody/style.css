@@ -1,15 +1,17 @@
-$height: 40px;
+:root {
+  --height: 40px;
+}
 
 .todos {
   margin-top: 20px;
   background-color: white;
-  max-height: calc($height * 8);
+  max-height: calc(var(--height) * 8);
   overflow: auto;
 }
 
 .todo {
-  height: $height;
-  line-height: $height;
+  height: var(--height);
+  line-height: var(--height);
   &:not(:first-child) {
     border-top: 1px solid #e2e2e2;
   }
@@ -18,11 +20,11 @@ $height: 40px;
        text-decoration: line-through;
     }
   }
-  .done {
+  & .done {
     float: left;
     padding: 10px;
     position: relative;
-    .checker {
+    & .checker {
       cursor: pointer;
       height: 20px;
       width: 20px;
@@ -32,7 +34,7 @@ $height: 40px;
       background-position: center;
       background-repeat: no-repeat;
     }
-    input {
+    & input {
       position: absolute;
       z-index: -1;
       &:checked ~ .checker {
@@ -41,10 +43,10 @@ $height: 40px;
       }
     }
   }
-  .text {
+  & .text {
     float: left;
   }
-  .date {
+  & .date {
     float: right;
     color: #999;
     padding: 0 10px;
