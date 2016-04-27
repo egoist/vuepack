@@ -11,11 +11,10 @@ If you want to build a Vue app really really fast, use nether [VuePack](https://
 - Vue
 - Webpack
 - Babel 6
-- Redux
+- Vuex
 - Vue-Router
 - Hot reloading
-- PostCSS
-- PreCSS
+- PostCSS & cssnext
 - Autoprefixer
 
 ## Cli tool

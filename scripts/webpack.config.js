@@ -5,9 +5,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: ['./src/main.js'],
   output: {
-    path: path.resolve('./build'),
+    path: path.join(process.cwd(), 'build/assets'),
     filename: 'bundle.js',
-    publicPath: '/build/'
+    publicPath: '/assets/'
   },
   resolve: {
     extensions: ['', '.js', '.vue', '.css']
@@ -32,7 +32,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-        filename: './index.html',
+        filename: path.join(process.cwd(), 'build/index.html'),
         title: 'VuePack',
         template: __dirname + '/index.html'
     })

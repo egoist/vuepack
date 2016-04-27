@@ -1,11 +1,13 @@
 <template>
-  <todo-section></todo-section>
+  <counter></counter>
 </template>
 
 <script>
+  import counter from '../components/counter'
+  
   export default {
     components: {
-      todoSection: require('../components/todoSection')
+      counter
     }
   }
 </script>
