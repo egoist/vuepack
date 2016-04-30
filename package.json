@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development HOT=1 NODE_PORT=3030 node scripts/devServer.js",
-    "build": "rm -rf ./build && webpack -p --config scripts/webpack.config.prod.js",
+    "build": "rm -rf ./build && webpack --config scripts/webpack.config.prod.js",
     "publish:demo": "npm run build && surge -d vuepack.surge.sh -p build"
   },
   "repository": {
@@ -38,9 +38,10 @@
     "cross-env": "^1.0.7",
     "css-loader": "^0.23.0",
     "extract-text-webpack-plugin": "^0.9.1",
-    "html-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^2.16.0",
     "postcss-cssnext": "^2.5.2",
     "postcss-loader": "^0.8.0",
+    "progress-bar-webpack-plugin": "^1.6.0",
     "style-loader": "^0.13.0",
     "vue-hot-reload-api": "^1.2.2",
     "vue-html-loader": "^1.0.0",

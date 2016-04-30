@@ -1,6 +1,7 @@
 var webpack = require('webpack')
 var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 module.exports = {
   entry: ['./src/main.js'],
@@ -35,6 +36,8 @@ module.exports = {
         filename: path.join(process.cwd(), 'build/index.html'),
         title: 'VuePack',
         template: __dirname + '/index.html'
+    }),
+    new ProgressBarPlugin({
     })
   ],
   babel: {
