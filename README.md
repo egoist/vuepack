@@ -1,4 +1,4 @@
-If you want to build a Vue app really really fast, use nether [VuePack](https://github.com/egoist/vuepack) nor  [Vue-cli](https://github.com/vuejs/vue-cli), these scaffolding stuffs won't help a lot, they just teach you how to configure things. Try using [vbuild](https://github.com/egoist/vbuild) now, which means no setup for you to start a Vue app.
+If you want to build a Vue app really really fast, try using [vbuild](https://github.com/egoist/vbuild) now, which means no setup for you to start a Vue app.
 
 # VuePack
 
@@ -13,26 +13,9 @@ If you want to build a Vue app really really fast, use nether [VuePack](https://
 - Babel 6
 - Vuex
 - Vue-Router
-- Hot reloading
+- Hot reloading components and Vuex mutations
 - PostCSS & cssnext
 - Autoprefixer
-
-## Cli tool
-
-![preview](http://ww4.sinaimg.cn/large/a15b4afegw1eynsfgjmlqj20qo0f0wgu)
-
-Use [VuePack Cli](https://github.com/egoist/vuepack-cli) to generate a new project:
-
-```bash
-npm install -g vuepack
-vue init hello-vue
-# or if you are located in China
-# vue init hello-vue --cn
-cd hello-vue
-npm run dev
-# wait for webpack to bundle then go to http://localhost:3030
-# use `Ctrl+H` to toggle Redux Dev Panel
-```
 
 ## Usage
 

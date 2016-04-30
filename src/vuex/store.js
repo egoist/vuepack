@@ -2,23 +2,9 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import createLogger from 'vuex/logger'
 
-import actions from './actions'
-import * as types from './mutation-types'
+import app from './modules/app'
 
 Vue.use(Vuex)
-
-const state = {
-  count: 0,
-}
-
-const mutations = {
-  [types.INCREMENT](state) {
-    state.count++
-  },
-  [types.DECREMENT](state) {
-    state.count--
-  },
-}
 
 const middlewares = []
 
@@ -26,8 +12,27 @@ if (__DEV__) {
   middlewares.push(createLogger())
 }
 
-export default new Vuex.Store({
-  mutations,
-  state,
+const store = new Vuex.Store({
+  modules: {
+    app
+  },
   middlewares
 })
+
+export default store
+
+if (module.hot) {
+  module.hot.accept([
+    './modules/app'
+  ], () => {
+    try {
+      store.hotUpdate({
+        modules: {
+          app: require('./modules/app').default
+        }
+      })
+    } catch (e) {
+      console.log(e.stack)
+    }
+  })
+}

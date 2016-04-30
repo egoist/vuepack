@@ -1,7 +1,6 @@
 var webpack = require('webpack')
 var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-var ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 module.exports = {
   entry: ['./src/main.js'],
@@ -22,6 +21,15 @@ module.exports = {
       {
         test: /\.vue$/,
         loaders: ['vue']
+      },
+      {
+        test: /\.hbs$/,
+        loaders: ['handlebars']
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'url?limit=100&name=images/[hash].[ext]',
+        exclude: [/node_modules/]
       }
     ]
   },
@@ -35,9 +43,8 @@ module.exports = {
     new HtmlWebpackPlugin({
         filename: path.join(process.cwd(), 'build/index.html'),
         title: 'VuePack',
-        template: __dirname + '/index.html'
-    }),
-    new ProgressBarPlugin({
+        template: __dirname + '/index.hbs',
+        inject: false
     })
   ],
   babel: {

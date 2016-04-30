@@ -2,6 +2,7 @@ var webpack = require('webpack')
 var config = require('./webpack.config')
 var path = require('path')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 config.devtool = 'source-map'
 config.output.filename = 'bundle.[hash].js'
@@ -20,7 +21,8 @@ config.plugins = [
     },
     comments: false
   }),
-  new ExtractTextPlugin('[name].[contenthash].css')
+  new ExtractTextPlugin('[name].[contenthash].css'),
+  new ProgressBarPlugin()
 ].concat(config.plugins)
 config.vue.loaders = {
   css: ExtractTextPlugin.extract(

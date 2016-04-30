@@ -7,7 +7,7 @@ import routes from './routes'
 Vue.use(VueRouter)
 
 if (__DEV__) {
-  window.Vue = Vue
+  window.VueDev = Vue
 }
 
 const router = new VueRouter()

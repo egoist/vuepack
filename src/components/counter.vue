@@ -32,11 +32,11 @@
 
 <script>
   import {incrementAsync} from '../vuex/actions'
-  
+
   export default {
     vuex: {
       getters: {
-        count: state => state.count
+        count: state => state.app.count
       },
       actions: {
         incrementAsync
