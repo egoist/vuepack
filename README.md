@@ -16,6 +16,16 @@ If you want to build a Vue app really really fast, try using [vbuild](https://gi
 - PostCSS & cssnext
 - Autoprefixer
 
+## Quick Start
+
+```bash
+$ git clone https://github.com/egoist/vuepack.git 
+$ cd vuepack
+$ npm install
+$ npm run dev
+# open http://localhost:3030
+```
+
 ## Usage
 
 |Command|Description|
