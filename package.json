@@ -53,7 +53,7 @@
     "vue-router": "^0.7.7",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.13.0",
-    "webpack-hot-server": "^0.3.6"
+    "webpack-hot-server": "^0.4.1"
   },
   "dependencies": {
     "vue": "^1.0.21",
