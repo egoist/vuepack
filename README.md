@@ -34,6 +34,12 @@ $ npm run dev
 |npm run dev|Run webpack and server with hot-reload enabled|
 |npm run build|Build assets for production use, dumped in `./build`|
 
+## Customize the devServer
+
+You can directly modify [scripts/devServer.js](https://github.com/egoist/vuepack/blob/master/scripts/devServer.js) since it simply uses [Express](http://expressjs.com) under the hood. 
+
+Or, in a more recommended way, update the [scripts/wrap.js](https://github.com/egoist/vuepack/blob/master/scripts/wrap.js) instead.
+
 ## License
 
 MIT &copy; [EGOIST](https://github.com/egoist)
