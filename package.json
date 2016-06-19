@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development HOT=1 NODE_PORT=3030 node scripts/devServer.js",
-    "build": "rm -rf ./build && webpack --config scripts/webpack.config.prod.js",
+    "build": "rimraf ./build && webpack --config scripts/webpack.config.prod.js",
     "publish:demo": "npm run build && surge -d vuepack.surge.sh -p build"
   },
   "repository": {
@@ -46,6 +46,7 @@
     "postcss-cssnext": "^2.5.2",
     "postcss-loader": "^0.9.1",
     "progress-bar-webpack-plugin": "^1.6.0",
+    "rimraf": "^2.5.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^1.2.2",
