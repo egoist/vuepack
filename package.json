@@ -59,7 +59,7 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "dependencies": {
-    "vue": "^1.0.21",
-    "vuex": "^0.6.3"
+    "vue": "^1.0.26",
+    "vuex": "^1.0.0-rc"
   }
 }
