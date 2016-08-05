@@ -9,7 +9,9 @@ config.plugins = [
   new webpack.NoErrorsPlugin(),
   new webpack.DefinePlugin({
     '__DEV__': true,
-    'process.env': JSON.stringify('development')
+    'process.env': {
+      'NODE_ENV': JSON.stringify('development')
+    }
   })
 ].concat(config.plugins)
 
