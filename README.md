@@ -6,6 +6,7 @@
 ## Features
 
 - Vue 2
+- JSX support
 - Latest version of Vuex/Router
 - Webpack 2
 - Babel 6

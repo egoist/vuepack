@@ -6,7 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const postcss = [
   require('autoprefixer')({
     browsers: ['last 2 versions', 'ie > 8']
-  })
+  }),
+  require('precss')
 ]
 
 module.exports = {
@@ -23,10 +24,6 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        test: /\.vue$/,
-        loaders: ['vue']
-      },
       {
         test: /\.js$/,
         loaders: ['babel'],
@@ -45,10 +42,6 @@ module.exports = {
     ]
   },
   postcss,
-  vue: {
-    loaders: {},
-    postcss
-  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'VuePack',
