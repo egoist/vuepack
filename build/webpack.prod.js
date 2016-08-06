@@ -7,7 +7,7 @@ const config = require('./webpack.base')
 config.output.filename = '[name].[chunkhash].js'
 config.plugins.push(
   new ProgressBarPlugin(),
-  new ExtractTextPlugin('styles.css'),
+  new ExtractTextPlugin('styles.[contenthash].css'),
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify('production')
   }),
