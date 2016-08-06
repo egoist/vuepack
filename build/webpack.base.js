@@ -39,6 +39,9 @@ module.exports = {
     presets: [
       ['es2015', {modules: false}],
       'stage-1'
+    ],
+    plugins: [
+      'transform-vue-jsx'
     ]
   },
   postcss,
