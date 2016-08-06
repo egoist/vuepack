@@ -9,6 +9,7 @@
 - Webpack 2
 - Babel 6
 - Hot reloading
+- Split vendor code from your app
 - A boilerplate which is small and focusing on client-side apps
 
 For Vue 1 version please head to [vue-1](https://github.com/egoist/vuepack/tree/vue-1) branch.
