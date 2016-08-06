@@ -7,6 +7,7 @@
 <style>
 body {
   margin: 0;
+  font-size: 2rem;
   font-family: -apple-system, BlinkMacSystemFont,
                'avenir next', avenir,
                helvetica, 'helvetica neue',
