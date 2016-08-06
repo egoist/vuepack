@@ -1,0 +1,51 @@
+{
+  "name": "vuepack",
+  "version": "0.0.0",
+  "description": "A modern Vue.js starter which uses Vue 2, Vuex, Vue-router and Webpack 2.",
+  "main": "client/index.js",
+  "scripts": {
+    "test": "echo lol",
+    "build": "rm -rf dist && webpack --config build/webpack.prod.js",
+    "dev": "node build/server.js",
+    "gh": "npm run build && gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egoist/vuepack.git"
+  },
+  "keywords": [
+    "vue",
+    "vuex",
+    "vue-router",
+    "webpack",
+    "starter",
+    "boilerplate"
+  ],
+  "author": "EGOIST <0x142857@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egoist/vuepack/issues"
+  },
+  "homepage": "https://github.com/egoist/vuepack#readme",
+  "dependencies": {
+    "vue": "^2.0.0-beta.7",
+    "vue-router": "^2.0.0-rc.2",
+    "vuex": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-1": "^6.13.0",
+    "css-loader": "^0.23.1",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.3",
+    "html-webpack-plugin": "^2.22.0",
+    "postcss-loader": "^0.9.1",
+    "progress-bar-webpack-plugin": "^1.9.0",
+    "vue-loader": "^9.3.2",
+    "webpack": "^2.1.0-beta.20",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.12.2"
+  }
+}
