@@ -13,7 +13,13 @@
 - Split vendor code from your app
 - A boilerplate which is small and focusing on client-side apps
 
-For Vue 1 version please head to [vue-1](https://github.com/egoist/vuepack/tree/vue-1) branch.
+<h2></h2>
+
+For Vue 1 please head to [vue-1](https://github.com/egoist/vuepack/tree/vue-1) branch.
+
+For JSX component please head to [jsx](https://github.com/egoist/vuepack/tree/jsx) branch, it works pretty well but has no built-in hot reloading support for now.
+
+For Isomorphic rendering please head to [vue-isomorphic-starter](https://github.com/egoist/vue-isomorphic-starter).
 
 ## Get Started
 
