@@ -1,7 +1,7 @@
 {
-  "name": "vuepack",
+  "name": "{{ name }}",
   "version": "0.0.0",
-  "description": "A modern Vue.js starter which uses Vue 2, Vuex, Vue-router and Webpack 2.",
+  "description": "{{ description }}",
   "main": "client/index.js",
   "scripts": {
     "test": "echo lol",
@@ -9,24 +9,8 @@
     "dev": "node build/server.js",
     "gh": "npm run build && gh-pages -d dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/egoist/vuepack.git"
-  },
-  "keywords": [
-    "vue",
-    "vuex",
-    "vue-router",
-    "webpack",
-    "starter",
-    "boilerplate"
-  ],
-  "author": "EGOIST <0x142857@gmail.com>",
+  "author": "{{ author }}",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/egoist/vuepack/issues"
-  },
-  "homepage": "https://github.com/egoist/vuepack#readme",
   "dependencies": {
     "vue": "^2.0.0-beta.7",
     "vue-router": "^2.0.0-rc.2",
@@ -35,10 +19,12 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
-    "babel-helper-vue-jsx-merge-props": "^2.0.1",
     "babel-loader": "^6.2.4",
+    {{#jsx}}
+    "babel-helper-vue-jsx-merge-props": "^2.0.1",
     "babel-plugin-syntax-jsx": "^6.13.0",
     "babel-plugin-transform-vue-jsx": "^3.0.0",
+    {{/jsx}}
     "babel-preset-es2015": "^6.13.2",
     "babel-preset-stage-1": "^6.13.0",
     "css-loader": "^0.23.1",

@@ -1,0 +1,24 @@
+{
+  "prompts": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "message": "Project name"
+    },
+    "description": {
+      "type": "string",
+      "required": false,
+      "message": "Project description",
+      "default": "A modern Vue.js project which uses Vue 2, Vuex, Vue-router and Webpack 2."
+    },
+    "author": {
+      "type": "string",
+      "message": "Author"
+    },
+    "jsx": {
+      "type": "confirm",
+      "message": "Use JSX in your code?"
+    }
+  },
+  "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev\n\n"
+}

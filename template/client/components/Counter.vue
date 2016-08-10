@@ -1,6 +1,6 @@
 <template>
   <div class="counter" @click="$store.dispatch('INCREMENT')">
-    {{ count }}
+    \{{ count }}
   </div>
 </template>
 
