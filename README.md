@@ -24,8 +24,9 @@ For Isomorphic rendering please head to [vue-isomorphic-starter](https://github.
 ## Get Started
 
 ```bash
-# clone or fork this repo
-$ cd vuepack
+$ npm install -g vue-cli
+$ vue init egoist/vuepack new-project
+$ cd new-project
 $ npm install
 
 # edit files and start developing
