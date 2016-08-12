@@ -11,17 +11,19 @@
 - Babel 6
 - Hot reloading
 - Split vendor code from your app
+- You can choose to use JSX
+- [CSS modules](https://github.com/css-modules/css-modules) are enabled by default in JSX mode
 - A boilerplate which is small and focusing on client-side apps
 
 <h2></h2>
 
-For Vue 1 please head to [vue-1](https://github.com/egoist/vuepack/tree/vue-1) branch.
-
-For JSX component please head to [jsx](https://github.com/egoist/vuepack/tree/jsx) branch, it works pretty well but has no built-in hot reloading support for now.
+For Vue 1 please head to [vue-1](https://github.com/egoist/vuepack/tree/vue-1) branch, however it's deprecated.
 
 For Isomorphic rendering please head to [vue-isomorphic-starter](https://github.com/egoist/vue-isomorphic-starter).
 
 ## Get Started
+
+You'd better have `node >=4` and `npm >=3` installed:
 
 ```bash
 $ npm install -g vue-cli
