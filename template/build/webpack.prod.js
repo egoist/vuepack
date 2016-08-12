@@ -5,6 +5,7 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const config = require('./webpack.base')
 const pkg = require('../package')
 
+config.devtool = 'source-map'
 config.entry.vendor = Object.keys(pkg.dependencies).filter(name => {
   // update the code if you want to
   // remove some dependencies you don't need in the vendor bundle
@@ -33,16 +34,19 @@ config.plugins.push(
   })
 )
 
+{{#if jsx}}
 config.module.loaders.push({
   test: /\.css$/,
   loader: ExtractTextPlugin.extract({
-    loader: 'css-loader!postcss-loader',
+    loader: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader',
     fallbackLoader: 'style-loader'
   })
 })
+{{else}}
 config.vue.loaders.css = ExtractTextPlugin.extract({
   loader: 'css-loader',
   fallbackLoader: 'vue-style-loader'
 })
+{{/if}}
 
 module.exports = config

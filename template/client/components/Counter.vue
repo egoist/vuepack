@@ -1,5 +1,5 @@
 <template>
-  <div class="counter" @click="$store.dispatch('INCREMENT')">
+  <div class="counter" @click="$store.dispatch('incrementAsync')">
     \{{ count }}
   </div>
 </template>
@@ -25,7 +25,6 @@ export default {
   line-height: 200px;
   font-size: 5rem;
   background-color: #f0f0f0;
-  box-shadow: inset 0 0 10px #ccc;
   user-select: none;
 }
 </style>

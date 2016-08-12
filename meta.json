@@ -20,5 +20,11 @@
       "message": "Use JSX in your code?"
     }
   },
+  "filters": {
+    "client/components/*.vue": "!jsx",
+    "client/components/**/*.{js,css}": "jsx",
+    "client/views/*.vue": "!jsx",
+    "client/views/**/*.{js,css}": "jsx"
+  },
   "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev\n\n"
 }

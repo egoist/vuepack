@@ -6,7 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const postcss = [
   require('autoprefixer')({
     browsers: ['last 2 versions', 'ie > 8']
-  })
+  }),
+  require('precss')
 ]
 
 module.exports = {
@@ -19,14 +20,18 @@ module.exports = {
     publicPath: './assets'
   },
   resolve: {
-    extensions: ['', '.js', '.vue', '.css', '.json']
+    extensions: ['', '.js',{{#unless jsx}} '.vue',{{/unless}} '.css', '.json'],
+    alias: {
+      root: path.join(__dirname, '../client'),
+      components: path.join(__dirname, '../client/components')
+    }
   },
   module: {
-    loaders: [
+    loaders: [{{#unless jsx}}
       {
         test: /\.vue$/,
         loaders: ['vue']
-      },
+      },{{/unless}}
       {
         test: /\.js$/,
         loaders: ['babel'],
@@ -44,11 +49,11 @@ module.exports = {
       'transform-vue-jsx'
     ]{{/jsx}}
   },
-  postcss,
+  postcss,{{#unless jsx}}
   vue: {
     loaders: {},
     postcss
-  },
+  },{{/unless}}
   plugins: [
     new HtmlWebpackPlugin({
       title: 'VuePack',

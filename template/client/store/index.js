@@ -14,13 +14,10 @@ const mutations = {
 }
 
 const actions = {
-  INCREMENT({commit}) {
-    commit('INCREMENT')
-  },
-  INCREMENT_ASYNC({commit}) {
+  incrementAsync({commit}) {
     setTimeout(() => {
       commit('INCREMENT')
-    }, 1000)
+    }, 200)
   }
 }
 
