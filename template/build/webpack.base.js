@@ -56,7 +56,7 @@ module.exports = {
   },{{/unless}}
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'VuePack',
+      title: '{{name}}',
       template: __dirname + '/index.html',
       filename: '../index.html'
     })
