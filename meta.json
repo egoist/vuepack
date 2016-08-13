@@ -17,7 +17,8 @@
     },
     "jsx": {
       "type": "confirm",
-      "message": "Use JSX in your code?"
+      "message": "Use JSX in your code?",
+      "default": false
     }
   },
   "filters": {
