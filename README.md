@@ -63,7 +63,9 @@ $ npm run app
 
 ## Folder Structure
 
-If you did not enable Eletron support, the dest folder is `./dist`, otherwise it's `./app/dist`. `./app` folder only exists when you enabled Electron support.
+If you did not enable Eletron support, the dest folder is `./dist`, otherwise it's `./app/dist`. 
+
+`./app` folder only exists when you enabled Electron support.
 
 ```bash
 ├── app             # the actual app you want to bundle with Electron
