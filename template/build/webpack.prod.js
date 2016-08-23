@@ -1,11 +1,19 @@
 'use strict'
+const exec = require('child_process').execSync
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const config = require('./webpack.base')
 const pkg = require('../package')
 
+{{#electron}}
+exec('rm -rf app/assets/')
+{{/electron}}
+
+{{#unless electron}}
+exec('rm -rf dist/')
 config.devtool = 'source-map'
+{{/unless}}
 config.entry.vendor = Object.keys(pkg.dependencies).filter(name => {
   // update the code if you want to
   // remove some dependencies you don't need in the vendor bundle

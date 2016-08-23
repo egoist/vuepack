@@ -19,13 +19,19 @@
       "type": "confirm",
       "message": "Use JSX in your code?",
       "default": false
+    },
+    "electron": {
+      "type": "confirm",
+      "message": "Support Electron?",
+      "default": false
     }
   },
   "filters": {
     "client/components/*.vue": "!jsx",
     "client/components/**/*.{js,css}": "jsx",
     "client/views/*.vue": "!jsx",
-    "client/views/**/*.{js,css}": "jsx"
+    "client/views/**/*.{js,css}": "jsx",
+    "app/*": "electron"
   },
   "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev\n\n"
 }

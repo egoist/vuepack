@@ -4,7 +4,6 @@ const config = require('./webpack.base')
 
 config.devtool = 'cheap-module-eval-source-map'
 config.output.publicPath = '/assets/'
-config.entry.client = ['webpack-hot-middleware/client', config.entry.client]
 config.plugins.push(
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify('development')

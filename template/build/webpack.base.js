@@ -15,7 +15,7 @@ module.exports = {
     client: './client/index.js'
   },
   output: {
-    path: path.join(__dirname, '../dist/assets'),
+    path: path.join(__dirname, '../{{#electron}}app/{{/electron}}{{#unless electron}}dist/{{/unless}}assets'),
     filename: '[name].js',
     publicPath: './assets'
   },
