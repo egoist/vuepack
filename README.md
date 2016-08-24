@@ -63,7 +63,7 @@ $ npm run app
 
 ## Folder Structure
 
-If you did not enable Eletron support, the dest folder is `./dist`, otherwise it's `./app/dist`. 
+If you did not enable Eletron support, the dest folder is `./dist`, otherwise it's `./app/assets`. 
 
 `./app` folder only exists when you enabled Electron support.
 
