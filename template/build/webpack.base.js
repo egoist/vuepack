@@ -60,5 +60,7 @@ module.exports = {
       template: __dirname + '/index.html',
       filename: '../index.html'
     })
-  ]
+  ]{{#electron}},
+  target: 'electron-renderer'
+  {{/electron}}
 }
