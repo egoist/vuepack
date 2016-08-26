@@ -1,4 +1,10 @@
 node_modules
 *.log
 .DS_Store
+{{#electron}}
+/app/index.html
+/app/assets
+{{/electron}}
+{{#unless electron}}
 /dist
+{{/unless}}
