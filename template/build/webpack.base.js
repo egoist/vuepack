@@ -4,9 +4,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const postcss = [
-  require('autoprefixer')({
-    browsers: ['last 2 versions', 'ie > 8']
-  }),
+  require('autoprefixer')(),
   require('precss')
 ]
 
@@ -39,6 +37,7 @@ module.exports = {
       }
     ]
   },
+  browserlist: ['last 2 versions', 'ie > 8'],
   babel: {
     babelrc: false,
     presets: [
