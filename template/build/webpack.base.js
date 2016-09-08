@@ -4,8 +4,10 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const postcss = [
-  require('autoprefixer')(),
-  require('precss')
+  require('autoprefixer')({
+    // Vue does not support ie 8 and below
+    browsers: ['last 2 versions', 'ie > 8']
+  })
 ]
 
 module.exports = {
@@ -41,7 +43,6 @@ module.exports = {
       }
     ]
   },
-  browserlist: ['last 2 versions', 'ie > 8'],
   babel: {
     babelrc: false,
     presets: [
