@@ -18,18 +18,18 @@ module.exports = {
     publicPath: './assets'
   },
   resolve: {
-    extensions: ['', '.js',{{#unless jsx}} '.vue',{{/unless}} '.css', '.json'],
+    extensions: ['', '.js', '.vue', '.css', '.json'],
     alias: {
       root: path.join(__dirname, '../client'),
       components: path.join(__dirname, '../client/components')
     }
   },
   module: {
-    loaders: [{{#unless jsx}}
+    loaders: [
       {
         test: /\.vue$/,
         loaders: ['vue']
-      },{{/unless}}
+      },
       {
         test: /\.js$/,
         loaders: ['babel'],
@@ -52,11 +52,11 @@ module.exports = {
       'transform-vue-jsx'
     ]{{/jsx}}
   },
-  postcss,{{#unless jsx}}
+  postcss,
   vue: {
     loaders: {},
     postcss
-  },{{/unless}}
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: '{{name}}',
