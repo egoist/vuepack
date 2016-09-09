@@ -15,7 +15,7 @@ If you have been suffering from configuration hell, give [vbuild](https://github
 - Babel 6
 - Hot reloading
 - Split vendor code from your app
-- JSX components are support by default
+- JSX components are supported by default
 - Electron support (optional)
 - [CSS modules](https://github.com/css-modules/css-modules) (optional)
 - A boilerplate which is small and focusing on client-side apps
