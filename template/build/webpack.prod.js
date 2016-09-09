@@ -3,9 +3,10 @@ const exec = require('child_process').execSync
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-const config = require('./webpack.base')
+const base = require('./webpack.base')
 const pkg = require('../package')
 const _ = require('./utils')
+const config = require('./config')
 
 if (_.modes.electron) {
   // remove dist folder in electron mode
@@ -14,19 +15,15 @@ if (_.modes.electron) {
   // remove dist folder in web app mode
   exec('rm -rf dist/')
   // use source-map in web app mode
-  config.devtool = 'source-map'
+  base.devtool = 'source-map'
 }
 
 // a white list to add dependencies to vendor chunk
-config.entry.vendor = [
-  'vue',
-  'vuex',
-  'vue-router'
-]
+base.entry.vendor = config.vendor
 // use hash filename to support long-term caching
-config.output.filename = '[name].[chunkhash:8].js'
+base.output.filename = '[name].[chunkhash:8].js'
 // add webpack plugins
-config.plugins.push(
+base.plugins.push(
   new ProgressBarPlugin(),
   new ExtractTextPlugin('styles.[contenthash:8].css'),
   new webpack.DefinePlugin({
@@ -49,7 +46,7 @@ config.plugins.push(
 )
 
 // extrac css in standalone .css files
-config.module.loaders.push({
+base.module.loaders.push({
   test: /\.css$/,
   loader: ExtractTextPlugin.extract({
     loader: _.cssLoader,
@@ -58,9 +55,9 @@ config.module.loaders.push({
 })
 
 // extract css in single-file components
-config.vue.loaders.css = ExtractTextPlugin.extract({
+base.vue.loaders.css = ExtractTextPlugin.extract({
   loader: 'css-loader?-autoprefixer',
   fallbackLoader: 'vue-style-loader'
 })
 
-module.exports = config
+module.exports = base

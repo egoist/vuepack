@@ -1,11 +1,11 @@
 'use strict'
 const webpack = require('webpack')
-const config = require('./webpack.base')
+const base = require('./webpack.base')
 const _ = require('./utils')
 
-config.devtool = 'cheap-module-eval-source-map'
-config.output.publicPath = '/assets/'
-config.plugins.push(
+base.devtool = 'cheap-module-eval-source-map'
+base.output.publicPath = '/assets/'
+base.plugins.push(
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify('development')
   }),
@@ -14,11 +14,11 @@ config.plugins.push(
 )
 
 // push loader for .css file
-config.module.loaders.push(
+base.module.loaders.push(
   {
     test: /\.css$/,
     loader: _.cssLoader
   }
 )
 
-module.exports = config
+module.exports = base
