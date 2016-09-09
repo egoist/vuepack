@@ -22,7 +22,7 @@
     },
     "jsx": {
       "type": "confirm",
-      "message": "Use __only__ JSX to write components?",
+      "message": "Generate components in JSX format?",
       "default": false
     },
     "electron": {
