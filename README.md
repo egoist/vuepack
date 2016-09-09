@@ -15,9 +15,9 @@ If you have been suffering from configuration hell, give [vbuild](https://github
 - Babel 6
 - Hot reloading
 - Split vendor code from your app
-- JSX support (optional)
-- Electron support (optional)
-- [CSS modules](https://github.com/css-modules/css-modules) are enabled by default in JSX mode
+- [JSX components are supported by default](/docs/jsx.md)
+- [Electron support](/docs/electron.md) (optional)
+- [CSS modules](https://github.com/css-modules/css-modules) (optional)
 - A boilerplate which is small and focusing on client-side apps
 
 <h2></h2>
@@ -45,21 +45,6 @@ $ npm run build
 ### For Windows users
 
 Install `git with unix tools` before getting started.
-
-### For Electron app
-
-**Hot reloading also works in your Electron app!**
-
-If you enable Electron support during the setup, it's a little different to develop the app:
-
-```bash
-# same as regular app
-$ npm run dev
-$ npm run build
-
-# open your electron app by running:
-$ npm run app
-```
 
 ## Folder Structure
 

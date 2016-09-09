@@ -1,6 +1,7 @@
 'use strict'
 const webpack = require('webpack')
 const config = require('./webpack.base')
+const _ = require('./utils')
 
 config.devtool = 'cheap-module-eval-source-map'
 config.output.publicPath = '/assets/'
@@ -12,18 +13,12 @@ config.plugins.push(
   new webpack.NoErrorsPlugin()
 )
 
-{{#if jsx}}
+// push loader for .css file
 config.module.loaders.push(
   {
     test: /\.css$/,
-    loader: 'style-loader!css-loader?-autoprefixer&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+    loader: _.cssLoader
   }
 )
-{{else}}
-config.module.loaders.push({
-  test: /\.css$/,
-  loader: 'style-loader!css-loader?-autoprefixer!postcss-loader'
-})
-{{/if}}
 
 module.exports = config

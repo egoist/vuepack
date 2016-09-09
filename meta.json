@@ -15,9 +15,14 @@
       "type": "string",
       "message": "Author"
     },
+    "cssModules": {
+      "type": "confirm",
+      "message": "Use CSS-modules for .css files?",
+      "default": false
+    },
     "jsx": {
       "type": "confirm",
-      "message": "Use JSX in your code?",
+      "message": "Generate components in JSX format?",
       "default": false
     },
     "electron": {
