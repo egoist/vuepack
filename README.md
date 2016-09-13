@@ -17,7 +17,7 @@ If you have been suffering from configuration hell, give [vbuild](https://github
 - Split vendor code from your app
 - [JSX components are supported by default](/docs/jsx.md)
 - [Electron support](/docs/electron.md) (optional)
-- [CSS modules](https://github.com/css-modules/css-modules) (optional)
+- [CSS modules](/docs/css-modules.md) (optional)
 - A boilerplate which is small and focusing on client-side apps
 
 <h2></h2>
