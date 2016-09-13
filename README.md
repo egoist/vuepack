@@ -9,12 +9,12 @@ If you have been suffering from configuration hell, give [vbuild](https://github
 
 ## Features
 
-- Vue 2
-- Latest version of Vuex/Router
-- Webpack 2
-- Babel 6
-- Hot reloading
+- Vue 2 / Vue-router / Vuex
+- Hot reloading for single-file components
 - Split vendor code from your app
+- Webpack 2
+- [Babel 6](/docs/babel.md)
+- [PostCSS](/docs/postcss.md)
 - [JSX components are supported by default](/docs/jsx.md)
 - [Electron support](/docs/electron.md) (optional)
 - [CSS modules](/docs/css-modules.md) (optional)

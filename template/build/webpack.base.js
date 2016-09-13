@@ -2,14 +2,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
-const postcss = [
-  require('autoprefixer')({
-    // Vue does not support ie 8 and below
-    browsers: ['last 2 versions', 'ie > 8']
-  }),
-  require('postcss-nested')
-]
+const config = require('./config')
 
 module.exports = {
   entry: {
@@ -44,24 +37,15 @@ module.exports = {
       }
     ]
   },
-  babel: {
-    babelrc: false,
-    presets: [
-      ['es2015', {modules: false}],
-      'stage-1'
-    ],
-    plugins: [
-      'transform-vue-jsx'
-    ]
-  },
-  postcss,
+  babel: config.babel,
+  postcss: config.postcss,
   vue: {
     loaders: {},
-    postcss
+    postcss: config.postcss
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: '{{name}}',
+      title: config.title,
       template: __dirname + '/index.html',
       filename: '../index.html'
     })
