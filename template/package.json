@@ -39,6 +39,7 @@
     "html-webpack-plugin": "^2.22.0",
     "precss": "^1.4.0",
     "postcss-loader": "^0.9.1",
+    "postcss-nested": "^1.0.0",
     "progress-bar-webpack-plugin": "^1.9.0",
     "style-loader": "^0.13.1",
     "vue-loader": "^9.3.2",

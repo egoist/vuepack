@@ -8,7 +8,7 @@ const pkg = require('../package')
 const _ = require('./utils')
 const config = require('./config')
 
-if (_.modes.electron) {
+if (config.electron) {
   // remove dist folder in electron mode
   exec('rm -rf app/assets/')
 } else {

@@ -6,5 +6,8 @@ module.exports = {
     'vue',
     'vue-router',
     'vuex'
-  ]
+  ],
+  cssModules: true,{{#if electron}}
+  electron: true,{{/if}}{{#if jsx}}
+  jsx: true{{/if}}
 }

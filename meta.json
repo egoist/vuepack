@@ -15,11 +15,6 @@
       "type": "string",
       "message": "Author"
     },
-    "cssModules": {
-      "type": "confirm",
-      "message": "Use CSS-modules for .css files?",
-      "default": false
-    },
     "jsx": {
       "type": "confirm",
       "message": "Generate components in JSX format?",
