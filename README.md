@@ -48,7 +48,7 @@ Install `git with unix tools` before getting started.
 
 ## Folder Structure
 
-If you did not enable Eletron support, the dest folder is `./dist`, otherwise it's `./app/assets`. 
+If you did not enable Eletron support, the dest folder is `./dist`, otherwise it's `./app/dist`. 
 
 `./app` folder only exists when you enabled Electron support.
 
