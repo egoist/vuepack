@@ -3,15 +3,16 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const config = require('./config')
+const _ = require('./utils')
 
 module.exports = {
   entry: {
     client: './client/index.js'
   },
   output: {
-    path: path.join(__dirname, '../{{#electron}}app/{{/electron}}{{#unless electron}}dist/{{/unless}}assets'),
+    path: _.outputPath,
     filename: '[name].js',
-    publicPath: './assets'
+    publicPath: './'
   },
   resolve: {
     extensions: ['', '.js', '.vue', '.css', '.json'],
@@ -34,6 +35,13 @@ module.exports = {
       {
         test: /\.es6$/,
         loaders: ['babel']
+      },
+      {
+        test: /\.(ico|jpg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+        loader: 'file',
+        query: {
+          name: 'static/media/[name].[hash:8].[ext]'
+        }
       }
     ]
   },
@@ -47,9 +55,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: config.title,
       template: __dirname + '/index.html',
-      filename: '../index.html'
+      filename: _.outputIndexPath
     })
-  ]{{#electron}},
-  target: 'electron-renderer'
-  {{/electron}}
+  ],
+  target: _.target
 }

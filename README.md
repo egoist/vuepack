@@ -54,14 +54,13 @@ If you did not enable Eletron support, the dest folder is `./dist`, otherwise it
 
 ```bash
 ├── app             # the actual app you want to bundle with Electron
-│    ├── assets     # directory which contains all bundled files
-│    ├── index.html # generated index.html by webpack for Electron
+│    ├── dist       # directory which contains all bundled files
 │    └── index.js   # entry file for Electron
 ├── build           # webpack configs and other scripts
 ├── client          # client-side app files
 ├── dist            # bundled files and index.html
 │    ├── index.html
-│    └── assets    
+│    └── [...other bundled files]   
 ├── node_modules    # dependencies
 └── package.json    # package info
 ```

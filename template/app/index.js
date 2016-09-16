@@ -16,18 +16,18 @@ function createWindow () {
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
   // and load the index.html of the app.
-  mainWindow.loadURL(`file://${__dirname}/index.html`)
+  mainWindow.loadURL(`file://${__dirname}/dist/index.html`)
 
   // Open the DevTools.
   if (isDev) {
     mainWindow.webContents.openDevTools()
-    
+
     const installExtension = require('electron-devtools-installer')
     installExtension.default(installExtension.VUEJS_DEVTOOLS)
       .then(name => console.log(`Added Extension:  ${name}`))
       .catch(err => console.log('An error occurred: ', err))
   }
-    
+
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

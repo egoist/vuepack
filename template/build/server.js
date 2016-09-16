@@ -37,7 +37,7 @@ app.use(devMiddleWare)
 app.use(require('webpack-hot-middleware')(compiler))
 
 const mfs = devMiddleWare.fileSystem
-const file = path.join(webpackConfig.output.path, '../index.html')
+const file = path.join(webpackConfig.output.path, 'index.html')
 {{#if electron}}
 devMiddleWare.waitUntilValid(() => {
   const html = mfs.readFileSync(file)
