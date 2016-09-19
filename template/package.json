@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo lol",
     "build": "webpack --config build/webpack.prod.js",
-    "dev": "node build/server.js",
-    "gh": "npm run build && gh-pages -d dist"{{#electron}},
+    "dev": "node build/server.js"{{#electron}},
     "app": "cross-env NODE_ENV=development electron app/"{{/electron}}
   },
   "author": "{{ author }}",
