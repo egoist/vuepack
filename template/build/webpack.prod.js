@@ -33,10 +33,13 @@ base.plugins.push(
     minimize: true
   }),
   new webpack.optimize.UglifyJsPlugin({
+    sourceMap: true,
     compress: {
       warnings: false
     },
-    comments: false
+    output: {
+      comments: false
+    }
   }),
   // extract vendor chunks
   new webpack.optimize.CommonsChunkPlugin({
