@@ -9,11 +9,15 @@
       "type": "string",
       "required": false,
       "message": "Project description",
-      "default": "A modern Vue.js project which uses Vue 2, Vuex, Vue-router and Webpack 2."
+      "default": "My Superb Vue Project"
     },
     "author": {
       "type": "string",
       "message": "Author"
+    },
+    "eslint": {
+      "type": "confirm",
+      "message": "Do you want to support ESLint?"
     },
     "jsx": {
       "type": "confirm",
@@ -31,7 +35,8 @@
     "client/components/**/*.{js,css}": "jsx",
     "client/views/*.vue": "!jsx",
     "client/views/**/*.{js,css}": "jsx",
-    "app/*": "electron"
+    "app/*": "electron",
+    ".eslintrc": "eslint"
   },
   "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{#electron}}\n\nIn another tab:\n\n  npm run app{{/electron}}"
 }
