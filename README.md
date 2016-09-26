@@ -40,6 +40,9 @@ $ npm install
 $ npm run dev
 # bundle all scripts and styles for production use
 $ npm run build
+
+# if you enabled eslint
+$ npm run lint
 ```
 
 ### For Windows users

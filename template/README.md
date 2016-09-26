@@ -20,3 +20,12 @@ To build for production:
 ```bash
 $ npm run build
 ```
+
+{{#if eslint}}
+To lint you code:
+
+```bash
+$ npm run lint
+```
+
+{{/if}}
