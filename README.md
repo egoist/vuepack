@@ -13,6 +13,7 @@ If you have been suffering from configuration hell, give [vbuild](https://github
 - Hot reloading for single-file components
 - Split vendor code from your app
 - Webpack 2
+- [ESLint](/docs/eslint.md)
 - [Babel 6](/docs/babel.md)
 - [PostCSS](/docs/postcss.md)
 - [JSX components are supported by default](/docs/jsx.md)
@@ -41,7 +42,7 @@ $ npm run dev
 # bundle all scripts and styles for production use
 $ npm run build
 
-# if you enabled eslint
+# lint your code
 $ npm run lint
 ```
 
