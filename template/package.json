@@ -7,7 +7,9 @@
     "test": "echo lol",
     "build": "webpack --config build/webpack.prod.js",
     "dev": "node build/server.js"{{#electron}},
-    "app": "cross-env NODE_ENV=development electron app/"{{/electron}}
+    "app": "cross-env NODE_ENV=development electron app/"{{/electron}}{{#eslint}},
+    "lint": "eslint client/*{{#electron}} app/*{{/electron}} --ext .js --ext .vue"
+    {{/eslint}}
   },
   "author": "{{ author }}",
   "license": "MIT",
@@ -31,6 +33,10 @@
     "electron-devtools-installer": "^1.1.5",
     "electron-prebuilt": "^1.3.4",
     {{/electron}}
+    {{#eslint}}
+    "eslint": "^3.6.0",
+    "eslint-config-egoist-vue": "^2.0.2",
+    {{/eslint}}
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.3",
     {{#electron}}
