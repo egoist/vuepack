@@ -3,7 +3,7 @@
   <br><br><strong>VuePack</strong> is a modern Vue.js starter <br>which uses Vue 2, Vuex, Vue-router and Webpack 2.
 </p>
 
-## Before you started
+## Before getting started
 
 If you have been suffering from configuration hell, give [vbuild](https://github.com/egoist/vbuild) a chance. `vbuild` is 100% compatible with this template.
 
