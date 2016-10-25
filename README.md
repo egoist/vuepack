@@ -5,7 +5,7 @@
 
 ## Before you started
 
-If you have been suffering from configuration hell, give [vbuild](https://github.com/egoist/vbuild) a chance.
+If you have been suffering from configuration hell, give [vbuild](https://github.com/egoist/vbuild) a chance. `vbuild` is 100% compatible with this template.
 
 ## Features
 
