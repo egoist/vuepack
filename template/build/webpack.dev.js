@@ -16,7 +16,7 @@ base.plugins.push(
 base.module.loaders.push(
   {
     test: /\.css$/,
-    loader: _.cssLoader
+    loader: `style-loader!${_.cssLoader}!postcss-loader`
   }
 )
 

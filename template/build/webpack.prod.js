@@ -48,11 +48,11 @@ base.plugins.push(
   })
 )
 
-// extrac css in standalone .css files
+// extract css in standalone .css files
 base.module.loaders.push({
   test: /\.css$/,
   loader: ExtractTextPlugin.extract({
-    loader: _.cssLoader,
+    loader: [_.cssLoader, 'postcss-loader'],
     fallbackLoader: 'style-loader'
   })
 })
