@@ -23,9 +23,7 @@ If you have been suffering from configuration hell, give [vbuild](https://github
 
 <h2></h2>
 
-For Vue 1 please head to [vue-1](https://github.com/egoist/vuepack/tree/vue-1) branch, however it's deprecated.
-
-For Isomorphic rendering please head to [vue-isomorphic-starter](https://github.com/egoist/vue-isomorphic-starter).
+Check out [the docs](https://github.com/egoist/vuepack/tree/master/docs) for more usages.
 
 ## Get Started
 
