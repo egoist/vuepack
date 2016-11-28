@@ -37,7 +37,7 @@
     {{/electron}}
     {{#eslint}}
     "eslint": "^3.6.0",
-    "eslint-config-egoist-vue": "^2.0.2",
+    "eslint-config-vue": "latest",
     {{/eslint}}
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.3",
