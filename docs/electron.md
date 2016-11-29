@@ -12,3 +12,5 @@ $ npm run build
 # open your electron app by running:
 $ npm run app
 ```
+
+**Note:** In Electron mode, if you open http://localhost:4000 in browser you will get a `require is not defined` error or something similar, because we're using webpack target `electron-renderer`, native modules like `querystring` or `electron` won't be "browserified" when you `require` them.
