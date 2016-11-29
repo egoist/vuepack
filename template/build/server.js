@@ -38,7 +38,7 @@ app.use(require('webpack-hot-middleware')(compiler))
 
 const mfs = devMiddleWare.fileSystem
 const file = path.join(webpackConfig.output.path, 'index.html')
-{{#if electron}}
+
 devMiddleWare.waitUntilValid(() => {
   const html = mfs.readFileSync(file)
   fse.ensureDirSync(path.dirname(file))
@@ -46,14 +46,13 @@ devMiddleWare.waitUntilValid(() => {
     if (err) console.log(err)
   })
 })
-{{else}}
+
 app.get('*', (req, res) => {
   devMiddleWare.waitUntilValid(() => {
     const html = mfs.readFileSync(file)
     res.end(html)
   })
 })
-{{/if}}
 
 app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`)
