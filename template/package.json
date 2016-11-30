@@ -41,9 +41,7 @@
     {{/eslint}}
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.3",
-    {{#electron}}
     "fs-extra": "^0.30.0",
-    {{/electron}}
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
     "postcss-loader": "^0.9.1",

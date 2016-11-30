@@ -3,11 +3,9 @@ const fs = require('fs')
 const path = require('path')
 const express = require('express')
 const webpack = require('webpack')
+const fse = require('fs-extra')
 const webpackConfig = require('./webpack.dev')
 const config = require('./config')
-{{#electron}}
-const fse = require('fs-extra')
-{{/electron}}
 
 const app = express()
 
