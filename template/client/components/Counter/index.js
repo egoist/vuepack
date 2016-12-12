@@ -19,7 +19,7 @@ export default {
           {this.$store.state.count}
         </div>
         <button on-click={this.increment}>Increment</button>
-        <button on-click={this.decrement}>Increment</button>
+        <button on-click={this.decrement}>Decrement</button>
         <button on-click={this.incrementAsync}>Increment Async</button>
       </div>
     )
