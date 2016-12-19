@@ -32,7 +32,7 @@ _.loadersOptions = () => {
   function generateLoader(langs) {
     langs.unshift('css-loader?sourceMap&-autoprefixer')
     if (!isProd) {
-      return ['vue-style-loader'].concat(langs).join('!')
+      return ['vue-style-loader'].concat(langs.map(lang => `${lang}?sourceMap`)).join('!')
     }
     return ExtractTextPlugin.extract({
       fallbackLoader: 'vue-style-loader',
@@ -53,7 +53,7 @@ _.loadersOptions = () => {
         postcss: config.postcss,
         loaders: {
           css: generateLoader([]),
-          sass: generateLoader(['sass-loader?indentedSyntax']),
+          sass: generateLoader(['sass-loader']),
           scss: generateLoader(['sass-loader']),
           less: generateLoader(['less-loader']),
           stylus: generateLoader(['stylus-loader']),
