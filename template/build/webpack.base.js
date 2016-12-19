@@ -2,6 +2,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const config = require('./config')
 const _ = require('./utils')
 
@@ -64,7 +65,14 @@ module.exports = {
       template: __dirname + '/index.html',
       filename: _.outputIndexPath
     }),
-    new webpack.LoaderOptionsPlugin(_.loadersOptions())
+    new webpack.LoaderOptionsPlugin(_.loadersOptions()),
+    new CopyWebpackPlugin([
+      {
+        from: _.cwd('./static'),
+        // to the roor of dist path
+        to: './'
+      }
+    ])
   ],
   target: _.target
 }
