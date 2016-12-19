@@ -14,7 +14,7 @@
   "author": "{{ author }}",
   "license": "MIT",
   "dependencies": {
-    "pinkie-promise": "^2.0.1",
+    "promise-polyfill": "^6.0.2",
     "vue": "^2.1.0",
     "vue-router": "^2.0.0",
     "vuex": "^2.0.0",
