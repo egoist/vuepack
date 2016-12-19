@@ -12,7 +12,7 @@ npm install -D sass-loader node-sass
 ## Update the tag `lang` attibute
 
 ```vue
-<style lang="sass">
+<style lang="scss">
   $color: red;
   body {
     color: $color;
