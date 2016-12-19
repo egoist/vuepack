@@ -1,4 +1,6 @@
 'use strict'
+process.env.NODE_ENV = 'development'
+
 const webpack = require('webpack')
 const base = require('./webpack.base')
 const _ = require('./utils')
@@ -16,7 +18,7 @@ base.plugins.push(
 base.module.loaders.push(
   {
     test: /\.css$/,
-    loader: `style-loader!${_.cssLoader}!postcss-loader`
+    loaders: ['style-loader', _.cssLoader, 'postcss-loader']
   }
 )
 

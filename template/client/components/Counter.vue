@@ -21,7 +21,6 @@ export default {
 
 <style>
 .counter {
-  cursor: pointer;
   margin: 100px auto;
   border-radius: 3px;
   width: 200px;
