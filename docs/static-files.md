@@ -8,3 +8,7 @@ import foo from './assets/foo.png'
 ```
 
 But we also use [raw-loader](https://github.com/webpack/raw-loader) to handle `.svg` files, it would direcly give you the raw content of the SVG so that you can inline it to your component, since [Inline SVG is Best SVG](https://www.youtube.com/watch?v=af4ZQJ14yu8).
+
+---
+
+For something like **favicon.ico**, we use [copy-webpack-plugin](https://github.com/kevlened/copy-webpack-plugin) to copy everything inside `./static` folder to the root of dist folder.
