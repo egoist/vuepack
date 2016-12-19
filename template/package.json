@@ -44,6 +44,7 @@
     "extract-text-webpack-plugin": "^2.0.0-beta.3",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
+    "raw-loader": "^0.5.1",
     "postcss-loader": "^0.9.1",
     "postcss-nested": "^1.0.0",
     "style-loader": "^0.13.1",
