@@ -11,12 +11,21 @@ let mainWindow
 
 const isDev = process.env.NODE_ENV === 'development'
 
+let config
+
+if (isDev) {
+  config = require('../build/config')
+} else {
+  config = {}
+}
+
 function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
   // and load the index.html of the app.
-  mainWindow.loadURL(`file://${__dirname}/dist/index.html`)
+  const url = isDev ? `http://localhost:${config.port}` : `file://${__dirname}/dist/index.html`
+  mainWindow.loadURL(url)
 
   // Open the DevTools.
   if (isDev) {
