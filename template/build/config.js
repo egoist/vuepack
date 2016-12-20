@@ -6,7 +6,7 @@ module.exports = {
   title: '{{name}}',
   // when you use electron please set to relative path like ./
   // otherwise only set to absolute path when you're using history mode
-  publicPath: './',
+  publicPath: '{{#if electron}}.{{/if}}/',
   // add these dependencies to a standalone vendor bundle
   vendor: Object.keys(pkg.dependencies),
   // disable babelrc by default
