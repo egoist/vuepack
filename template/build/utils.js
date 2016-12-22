@@ -53,7 +53,7 @@ _.loadersOptions = () => {
         postcss: config.postcss,
         loaders: {
           css: generateLoader([]),
-          sass: generateLoader(['sass-loader']),
+          sass: generateLoader(['sass-loader?indentedSyntax']),
           scss: generateLoader(['sass-loader']),
           less: generateLoader(['less-loader']),
           stylus: generateLoader(['stylus-loader']),
