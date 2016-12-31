@@ -6,7 +6,7 @@
   "dependencies": {
     "jstransformer-handlebars": "^1.0.0"
   },
-  "version": "3.0.0",
+  "version": "3.0.1",
   "repository": {
     "url": "git@github.com:egoist/vuepack.git",
     "type": "git"
