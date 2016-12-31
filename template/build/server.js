@@ -6,6 +6,7 @@ const express = require('express')
 const webpack = require('webpack')
 const webpackConfig = require('./webpack.dev')
 const config = require('./config')
+const LogPlugin = require('./log-plugin')
 
 const app = express()
 
@@ -19,6 +20,8 @@ webpackConfig.entry.client = [
 webpackConfig.output.publicPath = `http://localhost:${port}/assets/`
 {{/electron}}
 
+webpackConfig.plugins.push(new LogPlugin(port))
+
 let compiler
 
 try {
@@ -30,23 +33,15 @@ try {
 
 const devMiddleWare = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
-  stats: {
-    colors: true,
-    modules: false,
-    children: false,
-    chunks: false,
-    chunkModules: false,
-    hash: false,
-    timings: false
-  }
+  quiet: true
 })
 app.use(devMiddleWare)
-app.use(require('webpack-hot-middleware')(compiler))
+app.use(require('webpack-hot-middleware')(compiler, {
+  log: () => {}
+}))
 
 const mfs = devMiddleWare.fileSystem
 const file = path.join(webpackConfig.output.path, 'index.html')
-
-console.log(`\n  > VuePack is running at ${chalk.yellow(`http://localhost:${port}`)}\n`)
 
 
 devMiddleWare.waitUntilValid()
