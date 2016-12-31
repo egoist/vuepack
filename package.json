@@ -1,5 +1,16 @@
 {
+  "name": "template-vuepack",
+  "scripts": {
+    "test": "echo lol"
+  },
   "dependencies": {
     "jstransformer-handlebars": "^1.0.0"
-  }
+  },
+  "version": "0.0.0",
+  "repository": {
+    "url": "git@github.com:egoist/vuepack.git",
+    "type": "git"
+  },
+  "author": "EGOIST <0x142857@gmail.com>",
+  "license": "MIT"
 }
