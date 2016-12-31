@@ -18,10 +18,16 @@ base.plugins.push(
 
 // push loader for css files
 _.cssProcessors.forEach(processor => {
+  let loaders
+  if (processor.loader === '') {
+    loaders = ['postcss-loader']
+  } else {
+    loaders = ['postcss-loader', processor.loader]
+  }
   base.module.loaders.push(
     {
       test: processor.test,
-      loaders: ['style-loader', _.cssLoader, processor.loader]
+      loaders: ['style-loader', _.cssLoader].concat(loaders)
     }
   )
 })

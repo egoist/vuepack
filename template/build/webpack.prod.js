@@ -49,10 +49,16 @@ base.plugins.push(
 
 // extract css in standalone css files
 _.cssProcessors.forEach(processor => {
+  let loaders
+  if (processor.loader === '') {
+    loaders = ['postcss-loader']
+  } else {
+    loaders = ['postcss-loader', processor.loader]
+  }
   base.module.loaders.push({
     test: processor.test,
     loader: ExtractTextPlugin.extract({
-      loader: [_.cssLoader, processor.loader],
+      loader: [_.cssLoader].concat(loaders,
       fallbackLoader: 'style-loader'
     })
   })

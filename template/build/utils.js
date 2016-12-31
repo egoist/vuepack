@@ -14,6 +14,7 @@ _.cssLoader = config.cssModules ?
   'css-loader?-autoprefixer'
 
 _.cssProcessors = [
+  {loader: '', test: /\.css$/},
   {loader: 'sass-loader?sourceMap', test: /\.scss$/},
   {loader: 'less-loader?sourceMap', test: /\.less$/},
   {loader: 'stylus-loader?sourceMap', test: /\.styl$/},
