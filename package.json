@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "jstransformer-handlebars": "^1.0.0"
+  }
+}

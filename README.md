@@ -29,6 +29,20 @@ Check out [the docs](https://github.com/egoist/vuepack/tree/master/docs) for mor
 
 You'd better have `node >=4` and `npm >=3` installed:
 
+## sao
+
+This template can be used with [sao](https://github.com/egoist/sao), which also means you can use the template offline:
+
+```bash
+yarn global add sao
+# from npm
+sao vuepack new-project
+# or git repo
+sao egoist/vuepack new-project
+```
+
+## vue-cli
+
 ```bash
 $ npm install -g vue-cli
 $ vue init egoist/vuepack new-project
