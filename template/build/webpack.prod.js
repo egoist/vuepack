@@ -47,12 +47,14 @@ base.plugins.push(
   })
 )
 
-// extract css in standalone .css files
-base.module.loaders.push({
-  test: /\.css$/,
-  loader: ExtractTextPlugin.extract({
-    loader: [_.cssLoader, 'postcss-loader'],
-    fallbackLoader: 'style-loader'
+// extract css in standalone css files
+_.cssProcessors.forEach(processor => {
+  base.module.loaders.push({
+    test: processor.test,
+    loader: ExtractTextPlugin.extract({
+      loader: [_.cssLoader, processor.loader],
+      fallbackLoader: 'style-loader'
+    })
   })
 })
 

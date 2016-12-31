@@ -13,6 +13,13 @@ _.cssLoader = config.cssModules ?
   'css-loader?-autoprefixer&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' :
   'css-loader?-autoprefixer'
 
+_.cssProcessors = [
+  {loader: 'sass-loader?sourceMap', test: /\.scss$/},
+  {loader: 'less-loader?sourceMap', test: /\.less$/},
+  {loader: 'stylus-loader?sourceMap', test: /\.styl$/},
+  {loader: 'sass-loader?indentedSyntax&sourceMap', test: /\.sass$/},
+]
+
 _.outputPath = config.electron ?
   path.join(__dirname, '../app/dist') :
   path.join(__dirname, '../dist')

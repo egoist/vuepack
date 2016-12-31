@@ -16,12 +16,14 @@ base.plugins.push(
   new FriendlyErrors()
 )
 
-// push loader for .css file
-base.module.loaders.push(
-  {
-    test: /\.css$/,
-    loaders: ['style-loader', _.cssLoader, 'postcss-loader']
-  }
-)
+// push loader for css files
+_.cssProcessors.forEach(processor => {
+  base.module.loaders.push(
+    {
+      test: processor.test,
+      loaders: ['style-loader', _.cssLoader, processor.loader]
+    }
+  )
+})
 
 module.exports = base
