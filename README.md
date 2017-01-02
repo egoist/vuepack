@@ -13,6 +13,7 @@ If you have been suffering from configuration hell, give [vbuild](https://github
 - Hot reloading for single-file components
 - Split vendor code from your app
 - Webpack 2
+- [Offline Ready, perfect for progressive web app](/docs/pwa.md)
 - [ESLint](/docs/eslint.md)
 - [Babel 6](/docs/babel.md)
 - [PostCSS](/docs/postcss.md)
