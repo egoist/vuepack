@@ -48,6 +48,7 @@
     "friendly-errors-webpack-plugin": "^1.1.2",
     "html-webpack-plugin": "^2.22.0",
     "raw-loader": "^0.5.1",
+    "offline-plugin": "^4.5.3",
     "postcss-loader": "^0.9.1",
     "postcss-nested": "^1.0.0",
     "style-loader": "^0.13.1",

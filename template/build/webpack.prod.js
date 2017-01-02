@@ -5,6 +5,7 @@ const exec = require('child_process').execSync
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ProgressPlugin = require('webpack/lib/ProgressPlugin')
+const OfflinePlugin = require('offline-plugin')
 const base = require('./webpack.base')
 const pkg = require('../package')
 const _ = require('./utils')
@@ -44,6 +45,15 @@ base.plugins.push(
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor',
     filename: 'vendor.[chunkhash:8].js'
+  }),
+  // progressive web app
+  // it uses the publicPath in webpack config
+  new OfflinePlugin({
+    relativePaths: false,
+    AppCache: false,
+    ServiceWorker: {
+      events: true
+    }
   })
 )
 
@@ -63,5 +73,17 @@ _.cssProcessors.forEach(processor => {
     })
   })
 })
+
+// minimize webpack output
+base.stats = {
+  // Add children information
+  children: false,
+  // Add chunk information (setting this to `false` allows for a less verbose output)
+  chunks: false,
+  // Add built modules information to chunk information
+  chunkModules: false,
+  chunkOrigins: false,
+  modules: false
+}
 
 module.exports = base
