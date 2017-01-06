@@ -18,7 +18,8 @@ module.exports = {
     ],
     // support jsx in render function
     plugins: [
-      'transform-vue-jsx'
+      'transform-vue-jsx',
+      'transform-runtime'
     ]
   },
   postcss: [
