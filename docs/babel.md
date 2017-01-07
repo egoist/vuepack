@@ -10,7 +10,8 @@ This default settings for `babel-loader` in Vuepack:
     'stage-1'
   ],
   plugins: [
-    'transform-vue-jsx'
+    'transform-vue-jsx',
+    'transform-runtime'
   ]
 }
 ```

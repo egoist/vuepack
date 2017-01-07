@@ -14,6 +14,7 @@
   "author": "{{ author }}",
   "license": "MIT",
   "dependencies": {
+    "babel-runtime": "^6.18.0",
     "promise-polyfill": "^6.0.2",
     "vue": "^2.1.0",
     "vue-router": "^2.0.0",
