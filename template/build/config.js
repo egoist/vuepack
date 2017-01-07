@@ -8,7 +8,13 @@ module.exports = {
   // otherwise only set to absolute path when you're using history mode
   publicPath: '{{#if electron}}.{{/if}}/',
   // add these dependencies to a standalone vendor bundle
-  vendor: Object.keys(pkg.dependencies),
+  vendor: [
+    'vue',
+    'vuex',
+    'vue-router',
+    'vuex-router-sync',
+    'promise-polyfill'
+  ],
   // disable babelrc by default
   babel: {
     babelrc: false,
