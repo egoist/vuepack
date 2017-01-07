@@ -8,4 +8,4 @@ The offline-plugin is only used in production environment, so no need to worry a
 
 ---
 
-To disable PWA support, simply remove [these lines](https://github.com/egoist/vuepack/blob/master/template/client/index.js#L4-L7).
+To disable PWA support, simply remove [this](https://github.com/egoist/vuepack/blob/master/template/client/index.js#L4-L7) and [this](https://github.com/egoist/vuepack/blob/master/template/build/webpack.prod.js#L49-L57).
