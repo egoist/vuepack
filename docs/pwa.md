@@ -6,3 +6,6 @@ VuePack is using [offline-plugin](https://github.com/NekR/offline-plugin) so tha
 
 The offline-plugin is only used in production environment, so no need to worry about the cache during development ;) Check out [./client/pwa.js](https://github.com/egoist/vuepack/blob/master/template/client/pwa.js) / [build/webpack.prod.js](https://github.com/egoist/vuepack/blob/master/template/build/webpack.prod.js#L51-L57) and [offline-plugin](https://github.com/NekR/offline-plugin) to know more.
 
+---
+
+To disable PWA support, simply remove [these lines](https://github.com/egoist/vuepack/blob/master/template/client/index.js#L4-L7).
