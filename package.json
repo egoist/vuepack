@@ -3,9 +3,7 @@
   "scripts": {
     "test": "echo lol"
   },
-  "dependencies": {
-    "jstransformer-handlebars": "^1.0.0"
-  },
+  "dependencies": {},
   "version": "3.1.0",
   "repository": {
     "url": "git@github.com:egoist/vuepack.git",
