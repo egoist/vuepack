@@ -62,7 +62,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: config.title,
-      template: __dirname + '/index.html',
+      template: path.resolve(__dirname, 'index.html'),
       filename: _.outputIndexPath
     }),
     new webpack.LoaderOptionsPlugin(_.loadersOptions()),
