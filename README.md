@@ -18,7 +18,7 @@ If you have been suffering from configuration hell, give [vbuild](https://github
 - [Babel 6](/docs/babel.md)
 - [PostCSS](/docs/postcss.md)
 - [JSX components are supported by default](/docs/jsx.md)
-- [Testcafe](/docs/testcafe.md)
+- [TestCafe](/docs/testcafe.md)
 - [Electron support](/docs/electron.md) (optional)
 - [CSS modules](/docs/css-modules.md) (optional)
 - A boilerplate which is small and focusing on client-side apps
