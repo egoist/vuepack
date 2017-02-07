@@ -1,3 +1,4 @@
+'use strict'
 const chalk = require('chalk')
 
 // this plugin if for loggin url after each time the compilation is done.

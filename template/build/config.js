@@ -18,15 +18,7 @@ module.exports = {
   // disable babelrc by default
   babel: {
     babelrc: false,
-    presets: [
-      ['es2015', {modules: false}],
-      'stage-1'
-    ],
-    // support jsx in render function
-    plugins: [
-      'transform-vue-jsx',
-      'transform-runtime'
-    ]
+    presets: ['vue-app'],
   },
   postcss: [
     // add prefix via postcss since it's faster

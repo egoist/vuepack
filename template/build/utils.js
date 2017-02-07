@@ -43,8 +43,8 @@ _.loadersOptions = () => {
       return ['vue-style-loader'].concat(langs).join('!')
     }
     return ExtractTextPlugin.extract({
-      fallbackLoader: 'vue-style-loader',
-      loader: langs.join('!')
+      fallback: 'vue-style-loader',
+      use: langs.join('!')
     })
   }
 
