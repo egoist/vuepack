@@ -4,7 +4,7 @@
     "test": "echo lol"
   },
   "dependencies": {},
-  "version": "3.1.1",
+  "version": "3.2.0",
   "repository": {
     "url": "git@github.com:egoist/vuepack.git",
     "type": "git"
