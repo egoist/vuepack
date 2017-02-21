@@ -21,8 +21,6 @@ if (config.electron) {
   base.devtool = 'source-map'
 }
 
-// a white list to add dependencies to vendor chunk
-base.entry.vendor = config.vendor
 // use hash filename to support long-term caching
 base.output.filename = '[name].[chunkhash:8].js'
 // add webpack plugins
@@ -44,7 +42,12 @@ base.plugins.push(
   // extract vendor chunks
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor',
-    filename: 'vendor.[chunkhash:8].js'
+    minChunks: module => {
+      return module.resource && /\.(js|css|es6)$/.test(module.resource) && module.resource.indexOf('node_modules') !== -1
+    }
+  }),
+  new webpack.optimize.CommonsChunkPlugin({
+    name: 'manifest'
   }),
   // progressive web app
   // it uses the publicPath in webpack config
