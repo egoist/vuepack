@@ -28,6 +28,11 @@ module.exports = {
       type: 'confirm',
       message: 'Support Electron?',
       default: false
+    },
+    "testcafe": {
+      "type": "confirm",
+      "message": "Add testcafe to run integration tests?",
+      "default": false
     }
   },
   filters: {
@@ -36,7 +41,8 @@ module.exports = {
     'client/views/*.vue': '!jsx',
     'client/views/**/*.{js,css}': 'jsx',
     'app/*': 'electron',
-    '.eslintrc': 'eslint'
+    '.eslintrc': 'eslint',
+    "test/e2e/*": "testcafe"
   },
   post({log, folderName, isNewFolder, chalk}) {
     log.success(`Your new Vue project has been successfully generated in ${chalk.underline(folderName)}!`)

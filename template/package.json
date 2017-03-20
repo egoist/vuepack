@@ -4,7 +4,7 @@
   "description": "{{ description }}",
   "main": "client/index.js",
   "scripts": {
-    "test": "testcafe all tests/index.js --app \"npm run dev\" --app-init-delay 10000",
+    "test": "{{#testcafe}}testcafe all test/e2e/index.js --app \"npm run dev\" --app-init-delay 10000{{/testcafe}}",
     "build": "webpack --config build/webpack.prod.js",
     "dev": "node build/server.js"{{#electron}},
     "app": "cross-env NODE_ENV=development electron app/"{{/electron}}{{#eslint}},
@@ -45,7 +45,9 @@
     "xo": "^0.18.0",
     "eslint-config-vue": "latest",
     "eslint-plugin-vue": "latest",
+    {{#testcafe}}
     "eslint-plugin-testcafe": "^0.2.0",
+    {{/testcafe}}
     {{/eslint}}
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
@@ -57,7 +59,9 @@
     "postcss-loader": "^0.9.1",
     "postcss-nested": "^1.0.0",
     "style-loader": "^0.13.1",
+    {{#testcafe}}
     "testcafe": "^0.12.1",
+    {{/testcafe}}
     "vue-loader": "^11.0.0",
     "vue-template-compiler": "^2.2.0",
     "webpack": "2.2.0",
