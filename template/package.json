@@ -23,10 +23,10 @@
   "dependencies": {
     "babel-runtime": "^6.18.0",
     "promise-polyfill": "^6.0.2",
-    "vue": "^2.1.0",
+    "vue": "^2.2.0",
     "vue-router": "^2.0.0",
     "vuex": "^2.0.0",
-    "vuex-router-sync": "^3.0.0"
+    "vuex-router-sync": "^4.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -58,8 +58,8 @@
     "postcss-nested": "^1.0.0",
     "style-loader": "^0.13.1",
     "testcafe": "^0.12.1",
-    "vue-loader": "^10.0.2",
-    "vue-template-compiler": "^2.1.3",
+    "vue-loader": "^11.0.0",
+    "vue-template-compiler": "^2.2.0",
     "webpack": "2.2.0",
     "webpack-dev-middleware": "^1.8.1",
     "webpack-hot-middleware": "^2.12.2"
