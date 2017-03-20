@@ -8,11 +8,18 @@
     "build": "webpack --config build/webpack.prod.js",
     "dev": "node build/server.js"{{#electron}},
     "app": "cross-env NODE_ENV=development electron app/"{{/electron}}{{#eslint}},
-    "lint": "eslint client/*{{#electron}} app/*{{/electron}} --ext .js --ext .vue"
+    "lint": "xo **/client/**/*.{vue,js}{{#electron}} **/app/**/*.js{{/electron}} !node_modules/**"
     {{/eslint}}
   },
   "author": "{{ author }}",
   "license": "MIT",
+  "xo": {
+    "extends": "./.eslintrc",
+    "esnext": true,
+    "envs": [
+      "browser"
+    ]
+  },
   "dependencies": {
     "babel-runtime": "^6.18.0",
     "promise-polyfill": "^6.0.2",
@@ -35,7 +42,7 @@
     "electron": "^1.4.2",
     {{/electron}}
     {{#eslint}}
-    "eslint": "^3.6.0",
+    "xo": "^0.18.0",
     "eslint-config-vue": "latest",
     "eslint-plugin-vue": "latest",
     "eslint-plugin-testcafe": "^0.2.0",

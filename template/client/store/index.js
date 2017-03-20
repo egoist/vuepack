@@ -8,16 +8,16 @@ const state = {
 }
 
 const mutations = {
-  INCREMENT(state) {
+  INCREMENT (state) {
     state.count++
   },
-  DECREMENT(state) {
+  DECREMENT (state) {
     state.count--
   }
 }
 
 const actions = {
-  incrementAsync({commit}) {
+  incrementAsync ({ commit }) {
     setTimeout(() => {
       commit('INCREMENT')
     }, 200)
