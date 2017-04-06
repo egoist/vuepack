@@ -16,7 +16,7 @@ If you want to use CSS modules in single file component, simply add `module` att
 </template>
 ```
 
-CSS modules is disabled in your non-vue components (eg: `import 'style.css'` in a JS file), but when you enabled JSX components in CLI prompts it will be set to `true` by default. However you can alway toggle it on and off setting `cssModules` in `./build/config.js`:
+CSS modules is disabled in your non-vue components by default (eg: `import 'style.css'` in a JS file), but when you enabled JSX components in CLI prompts it will be set to `true` by default. However you can always toggle it on and off by setting `cssModules` in `./build/config.js`:
 
 ```diff
 - cssModules: true
