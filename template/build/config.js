@@ -19,8 +19,8 @@ module.exports = {
       browsers: ['last 2 versions', 'ie > 8']
     }),
     require('postcss-nested')
-  ],
-  cssModules: false,{{#if electron}}
+  ],{{#if electron}}
   electron: true,{{/if}}{{#if jsx}}
+  cssModules: true,
   jsx: true{{/if}}
 }

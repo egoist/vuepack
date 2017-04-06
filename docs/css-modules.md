@@ -1,13 +1,6 @@
 # CSS Modules
 
-[CSS Modules](https://github.com/css-modules/css-modules) is disabled by default for your non-`.vue` files. However you can enable it in `./build/config.js`:
-
-```diff
-- cssModules: false
-+ cssModules: true
-```
-
-If you want to use CSS modules in single file component, simply:
+If you want to use CSS modules in single file component, simply add `module` attribute:
 
 ```vue
 <style module>
@@ -23,4 +16,11 @@ If you want to use CSS modules in single file component, simply:
 </template>
 ```
 
-For more documentations on this, please head to http://vue-loader.vuejs.org/en/features/css-modules.html
+CSS modules is disabled in your non-vue components by default (eg: `import 'style.css'` in a JS file), but when you enabled JSX components in CLI prompts it will be set to `true` by default. However you can always toggle it on and off by setting `cssModules` in `./build/config.js`:
+
+```diff
+- cssModules: true
++ cssModules: false
+```
+
+For more documentations on the usage of CSS modules, please head to http://vue-loader.vuejs.org/en/features/css-modules.html
