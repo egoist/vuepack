@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://ww4.sinaimg.cn/large/a15b4afegw1f6k20fb3p5j205o05ogli" alt="vuepack" width="60">
+  <img src="https://cloud.githubusercontent.com/assets/8784712/25835478/ac71a54a-34b1-11e7-80f7-069d7022ade2.png" alt="vuepack" width="60">
   <br><br><strong>VuePack</strong> is a modern Vue.js starter <br>which uses Vue 2, Vuex, Vue-router and Webpack 2.
 </p>
 
