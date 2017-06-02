@@ -1,0 +1,57 @@
+/*!
+ * Settings – Variables
+ */
+
+$s-fontFamilyBase: 'Arial', sans-serif;
+$s-fontFamilyHeadline: 'Arial', sans-serif;
+
+$s-sizeFontBase: 16px;
+$s-lineHeightFontBase: 1.3125; // 21px
+$s-sizeFontBaseL: 20px;
+$s-lineHeightFontBaseL: 1.3; // 26px
+
+$s-sizeFontMedium: 24px;
+$s-lineHeightFontMedium: 1.125; // 27px
+$s-sizeFontMediumL: 30px;
+$s-lineHeightFontMediumL: 1.1; // 33px
+
+$s-sizeFontLarge: $s-sizeFontMedium;
+$s-lineHeightFontLarge: $s-lineHeightFontMedium;
+$s-sizeFontLargeL: 50px;
+$s-lineHeightFontLargeL: 1.04; // 52px
+
+$s-sizeFontXLarge: 30px;
+$s-lineHeightFontXLarge: 1;
+$s-sizeFontXLargeL: 80px;
+$s-lineHeightFontXLargeL: 1;
+
+$s-fontWeightRegular: 400;
+$s-fontWeightBold: 800;
+$s-fontWeightBase: $s-fontWeightRegular;
+
+$s-fontStyleHeadline: italic;
+
+$s-sizeLineHeightBase: $s-lineHeightFontBase;
+$s-sizeLineHeightBaseComputed: ($s-sizeFontBase * $s-sizeLineHeightBase);
+
+/*!
+ *  Settings – z-Index
+ */
+$s-zindexMap: (
+  'burger': 100,
+  'menu': 90
+);
+
+$s-sizeContentMaxWidth: 1100px;
+
+$s-pagePadding: 30px;
+
+/*!
+ *  Settings – Breakpoints
+ */
+$s-sizeBreakpointTiny:          320px; // 'tiny' needs to be smalles breakpoint > see generic.breakpoint-sync.scss
+$s-sizeBreakpointSmall:         375px;
+// $s-sizeBreakpointSmall01:       430px;
+$s-sizeBreakpointMedium:        768px;
+$s-sizeBreakpointLarge:        1440px;
+$s-sizeBreakpointHuge:         1920px;

@@ -3,32 +3,26 @@
 To start:
 
 ```bash
-$ npm install
+$ yarn install
 ```
 
 To develop:
 
 ```bash
-$ npm run dev{{#if electron}}
-# in a new tab, run electron app
-$ npm run app
-{{/if}}
-```
+$ yarn run dev```
 
 To build for production:
 
 ```bash
-$ npm run build
+$ yarn run build
 ```
 
-{{#if eslint}}
 To lint you code:
 
 ```bash
-$ npm run lint
+$ yarn run lint
 ```
 
-{{/if}}
 
 ---
 

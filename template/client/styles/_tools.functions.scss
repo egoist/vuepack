@@ -1,0 +1,22 @@
+/*!
+ * General functions
+ */
+
+@function pxToEm($px, $ref: $s-sizeFontBase) {
+  @return toEm(toPx($px) / toPx($ref));
+}
+@function pxToRem($px) {
+  @return toRem(toPx($px) / toPx($s-sizeFontBase));
+}
+@function pxToPc($px, $ref: $s-sizeWidthContent) {
+  @return (toPx($px) / toPx($ref) * 100%);
+}
+@function toEm($val) {
+  @return ($val + 0em); // sass-lint:disable-line zero-unit
+}
+@function toRem($val) {
+  @return ($val + 0rem); // sass-lint:disable-line zero-unit
+}
+@function toPx($val) {
+  @return ($val + 0px); // sass-lint:disable-line zero-unit
+}

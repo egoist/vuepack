@@ -23,10 +23,11 @@ module.exports = {
     hints: process.env.NODE_ENV === 'production' ? 'warning' : false
   },
   resolve: {
-    extensions: ['.js', '.vue', '.css', '.json'],
+    extensions: ['.js', '.vue', '.css', '.scss', '.json'],
     alias: {
       root: path.join(__dirname, '../client'),
-      components: path.join(__dirname, '../client/components')
+      components: path.join(__dirname, '../client/components'),
+      styles: path.join(__dirname, '../client/styles')
     },
     modules: [
       _.cwd('node_modules'),

@@ -1,0 +1,21 @@
+/*!
+ * Global SCSS
+ *
+ * Based on the ITCSS methodology
+ */
+
+@import 'global';
+
+// Generic Layer
+@import 'generic.normalize';
+@import 'generic.box-sizing';
+@import 'generic.breakpoint-sync';
+@import 'generic.fonts';
+
+// Elements Layer
+@import 'elements.page';
+@import 'elements.link';
+@import 'elements.image';
+
+// Utility Layer
+@import 'utility.generic';

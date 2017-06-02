@@ -1,0 +1,109 @@
+/*!
+ * General Mixins
+ */
+
+/*!
+ * Hide visually
+ * See http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ * for discussion of different solutions
+ */
+@mixin visuallyhidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+@mixin visuallyhiddenReset() {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+@mixin visuallyhiddenFocusable() {
+  @include visuallyhidden;
+
+  &:focus,
+  &:active {
+    @include visuallyhiddenReset;
+  }
+}
+
+/*!
+ * Contain floats with clearfix
+ *
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+@mixin clearfix() {
+  &:before,
+  &:after {
+    display: table;
+    content: ' ';
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+/*!
+ * Lists with layout purpose
+ */
+@mixin resetList() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/*!
+ * Select dropdown element reset default appearance
+ */
+@mixin resetSelect() {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  appearance: none;
+}
+
+/*!
+ * Replace text
+ */
+@mixin replaceText() {
+  display: block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+/*!
+ * Placeholder in input fields
+ */
+@mixin placeholder() {
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder { // Firefox 18-
+    @content;
+  }
+
+  &::-moz-placeholder { // Firefox 19+
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

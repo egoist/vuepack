@@ -1,0 +1,27 @@
+/*!
+ * Sync breakpoints with JavaScript
+ *
+ * font-family property of title element contains the current breakpoint
+ * font-family property of head element contains all breakpoints
+ */
+
+@include mq($from: 0) {
+  title {
+    font-family: mqGetBreakpointJSON('tiny', '0px');
+  }
+}
+
+@each $name in map-keys($mqBreakpoints) {
+  $value: map-get($mqBreakpoints, $name);
+
+  @include mq($from: $name) {
+    title {
+      font-family: mqGetBreakpointJSON($name, $value);
+    }
+  }
+}
+
+head {
+  display: none;
+  font-family: mqGetBreakpointsJSON($mqBreakpoints);
+}

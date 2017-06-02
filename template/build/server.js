@@ -1,12 +1,12 @@
 'use strict'
-const fs = require('fs')
 const path = require('path')
-const chalk = require('chalk')
 const express = require('express')
 const webpack = require('webpack')
 const webpackConfig = require('./webpack.dev')
 const config = require('./config')
-const LogPlugin = require('./log-plugin')
+const Dashboard = require('webpack-dashboard')
+const DashboardPlugin = require('webpack-dashboard/plugin')
+const dashboard = new Dashboard()
 
 const app = express()
 
@@ -20,12 +20,15 @@ webpackConfig.entry.client = [
 webpackConfig.output.publicPath = `http://localhost:${port}/assets/`
 {{/electron}}
 
-webpackConfig.plugins.push(new LogPlugin(port))
-
 let compiler
 
 try {
   compiler = webpack(webpackConfig)
+  compiler.apply(new DashboardPlugin({
+    port: config.port,
+    handler: dashboard.setData,
+    minimal: true
+  }))
 } catch (err) {
   console.log(err.message)
   process.exit(1)
@@ -42,7 +45,6 @@ app.use(require('webpack-hot-middleware')(compiler, {
 
 const mfs = devMiddleWare.fileSystem
 const file = path.join(webpackConfig.output.path, 'index.html')
-
 
 devMiddleWare.waitUntilValid()
 

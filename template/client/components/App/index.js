@@ -1,9 +1,12 @@
-import './style.css'
+import 'styles/main'
+
+import './style.scss'
 
 export default {
-  render(h) {
+  name: 'App',
+  render (h) {
     return (
-      <div id="app">
+      <div class='App' id='app'>
         <router-view></router-view>
       </div>
     )

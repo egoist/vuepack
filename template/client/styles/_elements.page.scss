@@ -1,0 +1,18 @@
+/*!
+ * Page-level styling (e.g. html and body elements).
+ */
+
+
+html {
+  height: 100%;
+  font-family: $s-fontFamilyBase;
+  font-size: $s-sizeFontBase / 16px * 100%;
+  font-weight: $s-fontWeightBase;
+  line-height: $s-sizeLineHeightBase;
+  color: $s-colorTextDefault;
+  background: $s-colorBodyBackground;
+}
+
+body {
+  min-height: 100%;
+}

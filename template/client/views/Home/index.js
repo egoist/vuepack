@@ -1,6 +1,7 @@
 import Counter from 'components/Counter'
 
 export default {
+  name: 'HomeView',
   render(h) {
     return (
       <div class="page">

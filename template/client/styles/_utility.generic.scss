@@ -1,0 +1,11 @@
+/*!
+ * Generic utility classes
+ */
+
+.u-visuallyhidden {
+  @include visuallyhidden;
+}
+
+.u-dev-text {
+  color: orange; // sass-lint:disable-line no-color-literals no-color-keywords
+}
