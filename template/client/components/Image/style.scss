@@ -1,0 +1,9 @@
+@import '../../styles/global';
+
+.Image {
+  &--fullwidth {
+    .Image__img {
+      width: 100%;
+    }
+  }
+}

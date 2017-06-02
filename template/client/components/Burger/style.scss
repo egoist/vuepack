@@ -1,0 +1,31 @@
+@import '../../styles/global';
+
+@import '../../../node_modules/sass-burger/burger';
+
+$c: 'Burger';
+
+$c-Burger-padding: 5px;
+
+.#{$c} {
+  position: absolute;
+  top: 50%;
+  left: pxToRem($s-pagePadding - $c-Burger-padding);
+  z-index: z('burger');
+  width: (42px + $c-Burger-padding * 2);
+  height: (29px + $c-Burger-padding * 2);
+  padding: $c-Burger-padding;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  transform: translateY(-50%);
+
+  &__burger {
+    @include burger(42px, 1px, 13px);
+  }
+
+  &.is-open {
+    .#{$c}__burger {
+      @include burger-to-cross($color: $s-colorBodyBackground);
+    }
+  }
+}
