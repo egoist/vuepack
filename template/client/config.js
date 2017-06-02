@@ -1,6 +1,6 @@
 const CONFIG = {
   // API_URL: 'https://api',
-  ...(window.{{uppercase name}}_CONFIG || {})
+  ...(window.APP_CONFIG || {})
 }
 
 export default CONFIG

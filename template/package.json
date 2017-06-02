@@ -7,8 +7,9 @@
     "test": "{{#testcafe}}testcafe all test/e2e/index.js --app \"npm run dev\" --app-init-delay 10000{{/testcafe}}",
     "build": "webpack --config build/webpack.prod.js",
     "dev": "node build/server.js"{{#electron}},
-    "app": "cross-env NODE_ENV=development electron app/"{{/electron}}{{#eslint}},
-    "lint": "xo **/client/**/*.{vue,js}{{#electron}} **/app/**/*.js{{/electron}} !node_modules/**"
+    "app": "cross-env NODE_ENV=development electron app/"{{/electron}}
+    {{#eslint}},
+    "lint": "xo **/client/**/*.{vue,js}{{#electron}} **/app/**/*.js{{/electron}} !node_modules/**",
     {{/eslint}}
     "scaffold": "plop"
   },

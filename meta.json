@@ -52,5 +52,5 @@
     ".sass-lint.yml": "sasslint",
     "test/e2e/*": "testcafe"
   },
-  "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{#electron}}\n\nIn another tab:\n\n  npm run app{{/electron}}"
+  "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  yarn install\n  yarn run dev{{#electron}}\n\nIn another tab:\n\n  yarn run app{{/electron}}"
 }
