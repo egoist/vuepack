@@ -1,21 +1,15 @@
 # Babel
 
-This default settings for `babel-loader` in Vuepack:
+By default, we're using the official [babel-preset-vue-app](https://github.com/vuejs/babel-preset-vue-app).
 
-```js
+```json
 {
-  babelrc: false,
-  presets: [
-    ['es2015', {modules: false}],
-    'stage-1'
-  ],
-  plugins: [
-    'transform-vue-jsx',
-    'transform-runtime'
+  "presets": [
+    ["vue-app", {
+      "useBuiltIns": true
+    }]
   ]
 }
 ```
 
-Which means you can use all ES2015 and ESnext stage-1 features, and Vue JSX support.
-
-You can update it in `./build/config.js`.
+You can update `babel` field in `package.json` to use custom presets and plugins.

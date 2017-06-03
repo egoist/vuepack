@@ -20,6 +20,13 @@
       "browser"
     ]
   },
+  "babel": {
+    "presets": [
+      ["vue-app", {
+        "useBuiltIns": true
+      }]
+    ]
+  },
   "dependencies": {
     "babel-runtime": "^6.18.0",
     "promise-polyfill": "^6.0.2",

@@ -55,7 +55,6 @@ _.loadersOptions = () => {
       context: process.cwd(),
       // postcss plugins apply to .css files
       postcss: config.postcss,
-      babel: config.babel,
       vue: {
         // postcss plugins apply to css in .vue files
         postcss: config.postcss,
