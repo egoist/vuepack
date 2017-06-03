@@ -17,7 +17,7 @@
     },
     "eslint": {
       "type": "confirm",
-      "message": "Do you want to support ESLint?"
+      "message": "Do you want to use ESLint?"
     },
     "jsx": {
       "type": "confirm",
