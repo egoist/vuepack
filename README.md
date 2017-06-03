@@ -5,7 +5,11 @@
 
 ## Note
 
-I highly recommend you to use [vbuild](https://github.com/egoist/vbuild) instead, you can develop Vue.js app with no-config until you need it. Less boilerplate code, more happiness ❤️
+I highly recommend you to try [Poi](https://github.com/egoist/poi), you can develop Vue.js app with no-config until you need it. Less boilerplate code, more happiness ❤️
+
+
+Here's the plan for [VuePack 4.0](https://github.com/egoist/vuepack/issues/136), you can support my work by [donating](https://github.com/egoist/donate) or joining the development.
+
 ## Features
 
 - Vue 2 / Vue-router / Vuex
