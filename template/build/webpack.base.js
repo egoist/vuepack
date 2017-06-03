@@ -13,7 +13,11 @@ module.exports = {
   output: {
     path: _.outputPath,
     filename: '[name].js',
-    publicPath: config.publicPath
+    publicPath: config.publicPath,
+    // Point sourcemap entries to original disk location
+    devtoolModuleFilenameTemplate: info => path.resolve(info.absoluteResourcePath),
+    // Add /* filename */ comments to generated require()s in the output.
+    pathinfo: true
   },
   performance: {
     hints: process.env.NODE_ENV === 'production' ? 'warning' : false
