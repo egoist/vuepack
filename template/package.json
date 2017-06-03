@@ -72,6 +72,7 @@
     "offline-plugin": "^4.5.3",
     "postcss-loader": "^0.9.1",
     "postcss-nested": "^1.0.0",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.13.1",
     {{#testcafe}}
     "testcafe": "^0.12.1",
