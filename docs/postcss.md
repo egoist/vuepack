@@ -1,15 +1,8 @@
 # PostCSS
 
-This default settings for `postcss-loader` in Vuepack:
+By default we only use `autoprefixer` and `postcss-nested` in PostCSS,
+you can update `postcss` field in `package.json` to use custom plugins.
 
-```js
-[
-  require('autoprefixer')({
-    // Vue does not support ie 8 and below
-    browsers: ['last 2 versions', 'ie > 8']
-  }),
-  require('postcss-nested')
-]
-```
+## Autoprefixer
 
-You can update it in `./build/config.js`.
+Autoprefixer respects the `browserslist` field in `package.json`, the default value we use is: `['ie > 8', 'last 2 versions']`
