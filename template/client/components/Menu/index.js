@@ -15,7 +15,7 @@ export default {
     return (
       open
       ? <div class='Menu'>
-          <router-link to={{ name: 'home' }} exact>
+          <router-link to=\{{ name: 'home' }} exact>
             <h2 on-click={toggleMenu} class='Menu__title'>Contemporary Art<br /> Switzerland</h2>
           </router-link>
         </div>
