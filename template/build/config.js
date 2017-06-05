@@ -8,6 +8,6 @@ module.exports = {
   // otherwise only set to absolute path when you're using history mode
   publicPath: '{{#if electron}}.{{/if}}/',{{#if electron}}
   electron: true,{{/if}}{{#if jsx}}
-  cssModules: true,
+  cssModules: false,
   jsx: true{{/if}}
 }
