@@ -21,6 +21,6 @@ module.exports = (plop, config) => {
   // Generators.
   require('./components')(plop, config)
   require('./views')(plop, config)
-  // require('./store-modules')(plop, config)
+  require('./modules')(plop, config)
   // require('./init')(plop, config)
 }

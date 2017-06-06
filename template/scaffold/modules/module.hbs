@@ -1,0 +1,46 @@
+import getData from 'api/getData'
+
+const state = {
+  data: [],
+  loading: false,
+  error: false
+}
+
+const actions = {
+  loadData ({ commit }) {
+    commit('LOADING_DATA')
+    getData().then((response) => {
+      commit('SAVE_DATA', response)
+    }).catch((error) => {
+      commit('ERROR_LOADING_DATA', error)
+    })
+  }
+}
+
+const mutations = {
+  LOADING_DATA (state) {
+    state.loading = true
+    state.error = false
+  },
+  ERROR_LOADING_DATA (state, error) {
+    state.loading = false
+    state.error = error
+  },
+  SAVE_DATA (state, data) {
+    state.loading = false
+    state.error = false
+    state.data = data
+  }
+}
+
+const getters = {
+}
+
+const module = {
+  state,
+  getters,
+  mutations,
+  actions
+}
+
+export default module
