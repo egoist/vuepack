@@ -20,23 +20,23 @@ module.exports = (plop, config) => {
       name: 'shouldAddRoute'
     }],
     actions: (answers) => {
-      var actions = [{
+      let actions = [{
         type: 'add',
         path: path.resolve(config.basePath, 'views', answers.viewName, 'index.js'),
         templateFile: path.resolve(__dirname, 'view.hbs')
       }]
 
       if (answers.shouldAddRoute) {
-        actions.concat(
+        actions = actions.concat(
           [{
             type: 'modify',
             path: path.resolve(config.basePath, 'router', 'index.js'),
-            pattern: /(routes: \[)/,
-            template: '$1\n    {\n      path: \'/\{{lowerCase viewName }}\',\n      name: \'\{{ viewName }}\',\n      component: \{{ viewName }}\n    },'
+            pattern: /(\/\*\!\ scaffold:insert:route \*\/)/, // https://regex101.com/r/kVn3CA/1
+            template: '{\n      path: \'/\{{lowerCase viewName }}\',\n      name: \'\{{ viewName }}\',\n      component: \{{ viewName }}\n    },\n    $1'
           }, {
             type: 'modify',
             path: path.resolve(config.basePath, 'router', 'index.js'),
-            pattern: /(\nVue.use\(Router\))/,
+            pattern: /(\/\*\!\ scaffold:import:route \*\/)/, // https://regex101.com/r/azlBwd/1
             template: 'import \{{ viewName }} from \'../views/\{{ viewName }}\'\n$1'
           }]
         )
