@@ -50,7 +50,10 @@ sao egoist/vuepack new-project
 
 ```bash
 $ npm install -g vue-cli
-$ vue init egoist/vuepack new-project
+
+# For the time being we are still on a feature branch. therefore the #vuecid
+$ vue init wearelucid/vuepack#vuecid new-project
+
 $ cd new-project
 $ npm install
 
@@ -69,7 +72,7 @@ Install `git with unix tools` before getting started.
 
 ## Folder Structure
 
-If you did not enable Eletron support, the dest folder is `./dist`, otherwise it's `./app/dist`. 
+If you did not enable Eletron support, the dest folder is `./dist`, otherwise it's `./app/dist`.
 
 `./app` folder only exists when you enabled Electron support.
 
@@ -82,7 +85,7 @@ If you did not enable Eletron support, the dest folder is `./dist`, otherwise it
 ├── dist            # bundled files and index.html
 │    ├── index.html
 │    └── [...other bundled files]  
-├── tests           # e2e tests written by testcafe 
+├── tests           # e2e tests written by testcafe
 ├── node_modules    # dependencies
 └── package.json    # package info
 ```
