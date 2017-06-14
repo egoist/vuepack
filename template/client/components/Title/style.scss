@@ -1,19 +1,24 @@
 @import '../../styles/global';
 
 $c: 'Title';
-$c-HighlightColor: rgb(237, 48, 30);
+$c-colorHighlight: $s-colorBlue;
 
 .#{$c} {
+
   &--h1 {
     @include fontStyleXLarge;
   }
 
-  &--h2 {
+  &--h2,
+  &--h3,
+  &--h4,
+  &--h5,
+  &--h6 {
     @include fontStyleHeadline;
   }
 
   &--highlighted {
-    color: $c-HighlightColor;
+    color: $c-colorHighlight;
   }
 
 }
