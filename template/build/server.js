@@ -6,7 +6,7 @@ const webpackConfig = require('./webpack.dev')
 const config = require('./config')
 const Dashboard = require('webpack-dashboard')
 const DashboardPlugin = require('webpack-dashboard/plugin')
-const dashboard = new Dashboard()
+// const dashboard = new Dashboard()
 
 const app = express()
 
