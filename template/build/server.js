@@ -24,11 +24,11 @@ let compiler
 
 try {
   compiler = webpack(webpackConfig)
-  compiler.apply(new DashboardPlugin({
-    port: config.port,
-    handler: dashboard.setData,
-    minimal: true
-  }))
+  // compiler.apply(new DashboardPlugin({
+  //   port: config.port,
+  //   handler: dashboard.setData,
+  //   minimal: true
+  // }))
 } catch (err) {
   console.log(err.message)
   process.exit(1)
