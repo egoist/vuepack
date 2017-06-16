@@ -15,7 +15,7 @@ export default {
     }
   },
   render (h) {
-    const Tag = this.level ? `${this.level}` : 'h1' // default h1 tag
+    const Tag = this.level ? `h${this.level}` : 'h1' // default h1 tag
     const className = this.className('Title', this.computedModifiers)
 
     return (
