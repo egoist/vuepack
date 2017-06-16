@@ -12,6 +12,9 @@ export default {
     'modifiers': {
       type: Array,
       default: () => []
+    },
+    richText: {
+      type: String
     }
   },
   mixins: [classNameMixin],
@@ -27,11 +30,15 @@ export default {
   render (h) {
     const Tag = `h${this.level}`
     const className = this.className('Title', this.computedModifiers)
-
-    return (
-      <Tag class={className}>
-        {this.$slots.default}
-      </Tag>
-    )
+    if (this.richText) {
+      return (
+        // Use richText prop to deal with HTML elements (like <br />)
+        <Tag class={className} domPropsInnerHTML={this.richText}></Tag>
+      )
+    } else {
+      return (
+        <Tag class={className}>{this.$slots.default}</Tag>
+      )
+    }
   }
 }
