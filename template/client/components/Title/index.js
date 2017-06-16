@@ -4,18 +4,28 @@ import classNameMixin from 'mixins/className'
 
 export default {
   name: 'Title',
-  props: ['level', 'modifiers'],
+  props: {
+    level: {
+      type: Number,
+      default: 1
+    },
+    'modifiers': {
+      type: Array,
+      default: []
+    }
+  },
   mixins: [classNameMixin],
   computed: {
     computedModifiers () {
       // Each modifier has to be registered within props and pushed to the modifier array
-      const modifiers = this.modifiers ? this.modifiers : []
-      this.level ? modifiers.unshift(this.level) : false
-      return modifiers
+      return [
+        `h${this.level}`,
+        ...this.modifiers
+      ]
     }
   },
   render (h) {
-    const Tag = this.level ? `h${this.level}` : 'h1' // default h1 tag
+    const Tag = `h${this.level}`
     const className = this.className('Title', this.computedModifiers)
 
     return (
