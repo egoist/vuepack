@@ -6,7 +6,7 @@ const webpackConfig = require('./webpack.dev')
 const config = require('./config')
 const Dashboard = require('webpack-dashboard')
 const DashboardPlugin = require('webpack-dashboard/plugin')
-// const dashboard = new Dashboard()
+const dashboard = new Dashboard()
 
 const app = express()
 
@@ -24,11 +24,11 @@ let compiler
 
 try {
   compiler = webpack(webpackConfig)
-  // compiler.apply(new DashboardPlugin({
-  //   port: config.port,
-  //   handler: dashboard.setData,
-  //   minimal: true
-  // }))
+  compiler.apply(new DashboardPlugin({
+    port: config.port,
+    handler: dashboard.setData,
+    minimal: true
+  }))
 } catch (err) {
   console.log(err.message)
   process.exit(1)
