@@ -1,4 +1,4 @@
-import kababCase from 'lodash.kebabcase'
+import kebabCase from 'lodash.kebabcase'
 import classNameMixin from 'mixins/className'
 
 import './style.scss'
@@ -29,6 +29,9 @@ export default {
         `h${this.level}`,
         ...this.modifiers
       ]
+    },
+    idAttr () {
+      return this.id ? kebabCase(this.id) : ''
     }
   },
   render (h) {
@@ -37,11 +40,11 @@ export default {
     if (this.richText) {
       return (
         // Use richText prop to deal with HTML elements (like <br />)
-        <Tag class={className} id={this.id ? kababCase(this.id) : ''} domPropsInnerHTML={this.richText}></Tag>
+        <Tag class={className} id={this.idAttr} domPropsInnerHTML={this.richText}></Tag>
       )
     } else {
       return (
-        <Tag class={className} id={this.id ? kababCase(this.id) : ''} >{this.$slots.default}</Tag>
+        <Tag class={className} id={this.idAttr} >{this.$slots.default}</Tag>
       )
     }
   }
