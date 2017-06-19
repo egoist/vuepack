@@ -1,6 +1,7 @@
-import './style.scss'
-
+import kababCase from 'lodash.kebabcase'
 import classNameMixin from 'mixins/className'
+
+import './style.scss'
 
 export default {
   name: 'Title',
@@ -14,6 +15,9 @@ export default {
       default: () => []
     },
     richText: {
+      type: String
+    },
+    id: {
       type: String
     }
   },
@@ -33,11 +37,11 @@ export default {
     if (this.richText) {
       return (
         // Use richText prop to deal with HTML elements (like <br />)
-        <Tag class={className} domPropsInnerHTML={this.richText}></Tag>
+        <Tag class={className} id={this.id ? kababCase(this.id) : ''} domPropsInnerHTML={this.richText}></Tag>
       )
     } else {
       return (
-        <Tag class={className}>{this.$slots.default}</Tag>
+        <Tag class={className} id={this.id ? kababCase(this.id) : ''} >{this.$slots.default}</Tag>
       )
     }
   }
