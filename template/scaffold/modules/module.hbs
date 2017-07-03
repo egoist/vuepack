@@ -1,35 +1,51 @@
 import getData from 'api/getData'
 
 const state = {
-  data: [],
+  list: [],
   loading: false,
+  loaded: false,
   error: false
 }
 
 const actions = {
   loadData ({ commit }) {
-    commit('LOADING_DATA')
+    commit('DATA_LOAD')
     getData().then((response) => {
-      commit('SAVE_DATA', response)
+      commit('DATA_SAVE', response.data)
     }).catch((error) => {
-      commit('ERROR_LOADING_DATA', error)
+      commit('DATA_LOAD_ERROR', error)
+      /**
+       * You could also emit a global error here that then triggers the
+       * <Error /> view in the <App /> component. For example if you use a store
+       * to load a single post and the api returns a 404. Then it could make sense
+       * to dispatch it like so:
+       *
+       *   // ...
+       *   .catch((error) => {
+       *     commit('DATA_LOAD_CANCEL')
+       *     commit('DATA_LOAD_ERROR')
+       *     dispatch('error', { error })
+       *   })
+       *
+       **/
     })
   }
 }
 
 const mutations = {
-  LOADING_DATA (state) {
+  DATA_LOAD (state) {
     state.loading = true
     state.error = false
   },
-  ERROR_LOADING_DATA (state, error) {
+  DATA_LOAD_ERROR (state, error) {
     state.loading = false
     state.error = error
   },
-  SAVE_DATA (state, data) {
+  DATA_SAVE (state, data) {
     state.loading = false
+    state.loaded = true
     state.error = false
-    state.data = data
+    state.list = data
   }
 }
 
