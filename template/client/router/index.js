@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home'
-import NotFound from '../views/NotFound'
+import Error from '../views/Error'
 /*! scaffold:import:route */
 
 Vue.use(Router)
@@ -11,14 +11,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: Home
     },
     /*! scaffold:insert:route */
     {
       path: '*',
-      name: 'notfound',
-      component: NotFound
+      name: 'NotFound',
+      component: Error
     }
   ]
 })
