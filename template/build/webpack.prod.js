@@ -64,7 +64,8 @@ base.plugins.push(
     AppCache: false,
     ServiceWorker: {
       events: true
-    }
+    },
+    excludes: ['**/.*', '**/*.map', '_*']
   })
 )
 
