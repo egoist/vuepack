@@ -1,0 +1,41 @@
+/*!
+ * z-indices / z-index
+ */
+
+@function z($indices...) {
+  @if not map-has-nested-keys($s-zindexMap, $indices...) {
+    @warn 'No index found for `#{inspect($indices...)}` in $s-zindexMap map. Property omitted.';
+  }
+  @return map-deep-get($s-zindexMap, $indices...);
+}
+
+@function map-has-nested-keys($map, $keys...) {
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @return false;
+    }
+    $map: map-get($map, $key);
+  }
+  @return true;
+}
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+$s-zindexMap: (
+  'goku': 9001,
+  'shoryuken': 8000,
+  'modal': (
+    'base': 500,
+    'close': 100,
+    'header': 50,
+    'footer': 10
+  ),
+  'default': 1,
+  'below': -1,
+  'bottomless-pit': -9000
+) !default;

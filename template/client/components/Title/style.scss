@@ -1,0 +1,24 @@
+@import '../../styles/global';
+
+$c: 'Title';
+$c-colorHighlight: $s-colorBlue;
+
+.#{$c} {
+
+  &--h1 {
+    @include fontStyleXLarge;
+  }
+
+  &--h2,
+  &--h3,
+  &--h4,
+  &--h5,
+  &--h6 {
+    @include fontStyleHeadline;
+  }
+
+  &--highlighted {
+    color: $c-colorHighlight;
+  }
+
+}

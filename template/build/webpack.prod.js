@@ -2,12 +2,12 @@
 process.env.NODE_ENV = 'production'
 
 const webpack = require('webpack')
+{{#sasslint}}const SassLintPlugin = require('sasslint-webpack-plugin'){{/sasslint}}
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ProgressPlugin = require('webpack/lib/ProgressPlugin')
 const OfflinePlugin = require('offline-plugin')
 const rm = require('rimraf')
 const base = require('./webpack.base')
-const pkg = require('../package')
 const _ = require('./utils')
 const config = require('./config')
 
@@ -26,6 +26,14 @@ base.output.filename = '[name].[chunkhash:8].js'
 // add webpack plugins
 base.plugins.push(
   new ProgressPlugin(),
+  {{#sasslint}}new SassLintPlugin({
+    configFile: '.sass-lint.yml',
+    glob: 'client/**/*.s?(a|c)ss',
+    quiet: false,
+    failOnWarning: true,
+    failOnError: true,
+    testing: false
+  }),{{/sasslint}}
   new ExtractTextPlugin('styles.[contenthash:8].css'),
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify('production')
@@ -56,7 +64,8 @@ base.plugins.push(
     AppCache: false,
     ServiceWorker: {
       events: true
-    }
+    },
+    excludes: ['**/.*', '**/*.map', '_*']
   })
 )
 
@@ -86,7 +95,8 @@ base.stats = {
   // Add built modules information to chunk information
   chunkModules: false,
   chunkOrigins: false,
-  modules: false
+  modules: false,
+  colors: true
 }
 
 module.exports = base

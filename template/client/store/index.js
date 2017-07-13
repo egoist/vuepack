@@ -1,33 +1,26 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import ui from 'store/ui'
+import error from 'store/error'
+import demo from 'store/demo'
+/*! scaffold:import:module */
+
 Vue.use(Vuex)
 
-const state = {
-  count: 0
+const modules = {
+  /*! scaffold:insert:module */
+  ui,
+  error,
+  demo
 }
 
-const mutations = {
-  INCREMENT (state) {
-    state.count++
-  },
-  DECREMENT (state) {
-    state.count--
-  }
-}
-
-const actions = {
-  incrementAsync ({ commit }) {
-    setTimeout(() => {
-      commit('INCREMENT')
-    }, 200)
-  }
+const getters = {
 }
 
 const store = new Vuex.Store({
-  state,
-  mutations,
-  actions
+  modules,
+  getters
 })
 
 export default store

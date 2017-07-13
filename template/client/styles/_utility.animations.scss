@@ -1,0 +1,31 @@
+/*!
+ * Animation: Fade
+ */
+.u-anim-fade-delayed-enter-active,
+.u-anim-fade-delayed-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+}
+
+.u-anim-fade-delayed-enter-active {
+  transition-delay: 0.3s;
+}
+
+.u-anim-fade-delayed-enter,
+.u-anim-fade-delayed-leave-active {
+  opacity: 0;
+}
+
+/*!
+ * Animation: Fade Delayed
+ */
+.u-anim-fade-enter-active,
+.u-anim-fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+}
+
+.u-anim-fade-enter,
+.u-anim-fade-leave-active {
+  opacity: 0;
+}

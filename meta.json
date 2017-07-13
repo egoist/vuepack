@@ -19,10 +19,21 @@
       "type": "confirm",
       "message": "Do you want to use ESLint?"
     },
+    "sasslint": {
+      "type": "confirm",
+      "message": "Do you want to support SASSLint?"
+    },
     "jsx": {
       "type": "confirm",
-      "message": "Generate components in JSX format?",
-      "default": false
+      "message": "Generate components in JSX format?"
+    },
+    "axios": {
+      "type": "confirm",
+      "message": "Do you need to make network requests (axios)?"
+    },
+    "ganalytics": {
+      "type": "confirm",
+      "message": "Do you want to add Google Analytics (vue-analytics)?"
     },
     "electron": {
       "type": "confirm",
@@ -42,7 +53,8 @@
     "client/views/**/*.{js,css}": "jsx",
     "app/*": "electron",
     ".eslintrc": "eslint",
+    ".sass-lint.yml": "sasslint",
     "test/e2e/*": "testcafe"
   },
-  "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{#electron}}\n\nIn another tab:\n\n  npm run app{{/electron}}"
+  "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  yarn install\n  yarn run dev{{#electron}}\n\nIn another tab:\n\n  yarn run app{{/electron}}"
 }

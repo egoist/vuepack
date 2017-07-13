@@ -1,0 +1,97 @@
+@mixin fontSizeBase {
+  font-size: pxToRem($s-sizeFontBase);
+  line-height: $s-lineHeightFontBase;
+  @include mq($from: medium) {
+    font-size: pxToRem($s-sizeFontBaseL);
+    line-height: $s-lineHeightFontBaseL;
+  }
+}
+
+@mixin fontSizeMedium {
+  font-size: pxToRem($s-sizeFontMedium);
+  line-height: $s-lineHeightFontMedium;
+  letter-spacing: pxToRem(-0.3px);
+  @include mq($from: medium) {
+    font-size: pxToRem($s-sizeFontMediumL);
+    line-height: $s-lineHeightFontMediumL;
+    letter-spacing: pxToRem(-0.6px);
+  }
+}
+
+@mixin fontSizeLarge {
+  font-size: pxToRem($s-sizeFontLarge);
+  line-height: $s-lineHeightFontLarge;
+  letter-spacing: pxToRem(-0.6px);
+  @include mq($from: medium) {
+    font-size: pxToRem($s-sizeFontLargeL);
+    line-height: $s-lineHeightFontLargeL;
+    letter-spacing: pxToRem(-1px);
+  }
+}
+
+
+@mixin fontSizeXLarge {
+  font-size: pxToRem($s-sizeFontXLarge);
+  line-height: $s-lineHeightFontXLarge;
+  letter-spacing: pxToRem(-1px);
+  @include mq($from: medium) {
+    font-size: pxToRem($s-sizeFontXLargeL);
+    line-height: $s-lineHeightFontXLargeL;
+    letter-spacing: pxToRem(-1.6px);
+  }
+}
+
+/*!
+ * Font Weights
+ */
+
+@mixin fontWeightRegular {
+  font-weight: $s-fontWeightRegular;
+}
+
+@mixin fontWeightBold {
+  font-weight: $s-fontWeightBold;
+}
+
+/*!
+ * Link & Button Styles
+ */
+
+@mixin fontStyleLink {
+  text-decoration: none;
+  box-shadow: 0 3px 6px $s-colorBlack;
+}
+
+@mixin fontStyleButton {
+  @include fontSizeBase;
+  @include fontWeightRegular;
+}
+
+
+/*!
+ * Font Styles
+ */
+@mixin fontStyleDefault {
+  @include fontSizeBase;
+}
+
+@mixin fontStyleHeadlineReduced {
+  @include fontSizeMedium;
+  @include fontWeightBold;
+  font-family: $s-fontFamilyHeadline;
+  font-style: $s-fontStyleHeadline;
+}
+
+@mixin fontStyleHeadline {
+  @include fontSizeLarge;
+  @include fontWeightBold;
+  font-family: $s-fontFamilyHeadline;
+  font-style: $s-fontStyleHeadline;
+}
+
+@mixin fontStyleXLarge {
+  @include fontSizeXLarge;
+  @include fontWeightBold;
+  font-family: $s-fontFamilyHeadline;
+  font-style: $s-fontStyleHeadline;
+}

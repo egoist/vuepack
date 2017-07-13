@@ -1,12 +1,9 @@
 'use strict'
-const fs = require('fs')
 const path = require('path')
-const chalk = require('chalk')
 const express = require('express')
 const webpack = require('webpack')
 const webpackConfig = require('./webpack.dev')
 const config = require('./config')
-const LogPlugin = require('./log-plugin')
 
 const app = express()
 
@@ -20,8 +17,6 @@ webpackConfig.entry.client = [
 webpackConfig.output.publicPath = `http://localhost:${port}/assets/`
 {{/electron}}
 
-webpackConfig.plugins.push(new LogPlugin(port))
-
 let compiler
 
 try {
@@ -33,7 +28,10 @@ try {
 
 const devMiddleWare = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
-  quiet: true
+  quiet: false,
+  stats: {
+    colors: true
+  }
 })
 app.use(devMiddleWare)
 app.use(require('webpack-hot-middleware')(compiler, {
@@ -42,7 +40,6 @@ app.use(require('webpack-hot-middleware')(compiler, {
 
 const mfs = devMiddleWare.fileSystem
 const file = path.join(webpackConfig.output.path, 'index.html')
-
 
 devMiddleWare.waitUntilValid()
 

@@ -1,0 +1,70 @@
+@import '../../node_modules/normalize.css/normalize';
+
+/*!
+ * A very simple reset that sits on top of Normalize.css.
+ */
+
+blockquote,
+body,
+caption,
+dd,
+dl,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+legend,
+ol,
+p,
+pre,
+table,
+td,
+th,
+ul {
+  // @include fontStyleTextBase;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+/*!
+ * Remove trailing margins from nested lists.
+ */
+li > {
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+/*!
+ * Remove spaces between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+input {
+  line-height: inherit;
+}
+
+/*!
+ * Removing abbr border
+ */
+abbr {
+  &[title] {
+    border-bottom: 0;
+  }
+}
