@@ -23,13 +23,17 @@
       "type": "confirm",
       "message": "Do you want to support SASSLint?"
     },
+    "jsx": {
+      "type": "confirm",
+      "message": "Generate components in JSX format?"
+    },
     "axios": {
       "type": "confirm",
       "message": "Do you need to make network requests (axios)?"
     },
-    "jsx": {
+    "ganalytics": {
       "type": "confirm",
-      "message": "Generate components in JSX format?"
+      "message": "Do you want to add Google Analytics (vue-analytics)?"
     },
     "electron": {
       "type": "confirm",

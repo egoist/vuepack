@@ -45,6 +45,7 @@
     "sass-burger": "^1.3.1",
     "bows": "^1.7.0",
     "vue": "^2.2.0",
+    {{#ganalytics}}"vue-analytics": "^4.1.2",{{/ganalytics}}
     "vue-router": "^2.0.0",
     "vuex": "^2.0.0",
     "vuex-router-sync": "^4.0.0"
