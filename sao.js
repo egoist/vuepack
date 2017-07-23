@@ -44,8 +44,12 @@ module.exports = {
     '.eslintrc': 'eslint',
     "test/e2e/*": "testcafe"
   },
-  post({log, folderName, isNewFolder, chalk}) {
-    log.success(`Your new Vue project has been successfully generated in ${chalk.underline(folderName)}!`)
+  post({ log, gitInit, npmInstall, chalk, isNewFolder, folderName }) {
+    gitInit()
+    npmInstall()
+
+    log.success(`\nYour new Vue project has been successfully generated in ${chalk.underline(folderName)}!`)
+    console.log()
     console.log(chalk.bold(`  To get started:\n`))
     if (isNewFolder) console.log(`  cd ${folderName}`)
     console.log(`  yarn`)

@@ -53,9 +53,13 @@ base.plugins.push(
   // it uses the publicPath in webpack config
   new OfflinePlugin({
     relativePaths: false,
-    AppCache: false,
     ServiceWorker: {
-      events: true
+      events:true,
+      navigateFallbackURL:'/'
+    },
+    AppCache: {
+      events:true,
+      FALLBACK:{ '/':'/' }
     }
   })
 )
