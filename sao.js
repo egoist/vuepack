@@ -48,7 +48,7 @@ module.exports = {
     gitInit()
     npmInstall()
 
-    log.success(`\nYour new Vue project has been successfully generated in ${chalk.underline(folderName)}!`)
+    log.success(`Your new Vue project has been successfully generated in ${chalk.underline(folderName)}!`)
     console.log()
     console.log(chalk.bold(`  To get started:\n`))
     if (isNewFolder) console.log(`  cd ${folderName}`)
