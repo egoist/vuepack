@@ -1,4 +1,4 @@
-import firebaseAdmin from 'firebase-admin's
+import firebaseAdmin from 'firebase-admin'
 import * as functions from "firebase-functions"
 
 /**
