@@ -1,0 +1,12 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for {{ name }}",
+  "dependencies": {
+    "aws-sdk": "^2.141.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.1",
+    "firebase-admin": "~4.1.2",
+    "firebase-functions": "^0.7.3"
+  },
+  "private": true
+}
