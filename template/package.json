@@ -8,8 +8,16 @@
     "build": "webpack --config build/webpack.prod.js",
     "dev": "node build/server.js"{{#electron}},
     "app": "cross-env NODE_ENV=development electron app/"{{/electron}}{{#eslint}},
-    "lint": "xo **/client/**/*.{vue,js}{{#electron}} **/app/**/*.js{{/electron}} !node_modules/**"
+    "lint": "xo **/client/**/*.{vue,js}{{#electron}} **/app/**/*.js{{/electron}} !node_modules/**",
     {{/eslint}}
+    {{#functions}}
+    "package-functions": "babel 'functions' --out-dir 'functions-dist' --presets=es2015 --copy-files --ignore 'node_modules'",
+    "postpackage-functions": "yarn package-glem && cd functions-dist && yarn",
+    "deploy-functions": "yarn package-functions && yarn postpackage-functions && firebase deploy --only functions",
+    "deploy-firebase-services": "firebase deploy --only database,storage",
+    {{/functions}}
+    "cleanup-build": "rimraf {{#functions}}functions-dist &&{{/functions}} rimraf dist",
+    "deploy": "yarn {{#functions}}deploy-functions && yarn deploy-firebase-services &&{{/functions}}yarn deploy-hosting && yarn cleanup-build"
   },
   "author": "{{ author }}",
   "license": "MIT",
