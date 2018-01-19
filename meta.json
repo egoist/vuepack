@@ -33,6 +33,11 @@
       "type": "confirm",
       "message": "Add testcafe to run integration tests?",
       "default": false
+    },
+    "functions": {
+      "type": "confirm",
+      "message": "Add Firebase functions, storage & database?",
+      "default": true
     }
   },
   "filters": {
@@ -42,7 +47,8 @@
     "client/views/**/*.{js,css}": "jsx",
     "app/*": "electron",
     ".eslintrc": "eslint",
-    "test/e2e/*": "testcafe"
+    "test/e2e/*": "testcafe",
+    "functions/*": "functions"
   },
   "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{#electron}}\n\nIn another tab:\n\n  npm run app{{/electron}}"
 }

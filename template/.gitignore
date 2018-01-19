@@ -1,6 +1,9 @@
 node_modules
 *.log
 .DS_Store
+{{#functions}}
+/functions-dist
+{{/functions}}
 {{#electron}}
 /app/index.html
 /app/assets

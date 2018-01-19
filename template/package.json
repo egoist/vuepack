@@ -8,8 +8,17 @@
     "build": "webpack --config build/webpack.prod.js",
     "dev": "node build/server.js"{{#electron}},
     "app": "cross-env NODE_ENV=development electron app/"{{/electron}}{{#eslint}},
-    "lint": "xo **/client/**/*.{vue,js}{{#electron}} **/app/**/*.js{{/electron}} !node_modules/**"
+    "lint": "xo **/client/**/*.{vue,js}{{#electron}} **/app/**/*.js{{/electron}} !node_modules/**",
     {{/eslint}}
+    {{#functions}}
+    "package-functions": "babel 'functions' --out-dir 'functions-dist' --presets=es2015 --copy-files --ignore 'node_modules'",
+    "postpackage-functions": "cd functions-dist && yarn",
+    "deploy-functions": "yarn package-functions && yarn postpackage-functions && firebase deploy --only functions",
+    "deploy-firebase-services": "firebase deploy --only database,storage",
+    {{/functions}}
+    "deploy-hosting": "yarn build && firebase deploy --only hosting",
+    "cleanup-build": "rimraf {{#functions}}functions-dist &&{{/functions}} rimraf dist",
+    "deploy": "yarn {{#functions}}deploy-functions && yarn deploy-firebase-services &&{{/functions}}yarn deploy-hosting && yarn cleanup-build"
   },
   "author": "{{ author }}",
   "license": "MIT",
@@ -44,6 +53,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
+    {{#functions}}
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    {{/functions}}
     "babel-core": "^6.16.0",
     "babel-loader": "^6.2.4",
     "babel-preset-vue-app": "^1.1.1",
@@ -66,6 +80,7 @@
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "^0.9.0",
+    "firebase": "^4.4.0",
     "friendly-errors-webpack-plugin": "^1.1.2",
     "html-webpack-plugin": "^2.22.0",
     "raw-loader": "^0.5.1",
@@ -77,6 +92,8 @@
     {{#testcafe}}
     "testcafe": "^0.12.1",
     {{/testcafe}}
+    "rimraf": "^2.6.2",
+
     "vue-loader": "^11.0.0",
     "vue-template-compiler": "^2.2.0",
     "webpack": "2.2.0",
