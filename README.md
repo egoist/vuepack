@@ -13,6 +13,7 @@ Here's the plan for [VuePack 4.0](https://github.com/egoist/vuepack/issues/136),
 ## Features
 
 - Vue 2 / Vue-router / Vuex
+- Firebase Hosting & Functions (optionally)
 - Hot reloading for single-file components
 - Split vendor code from your app
 - Webpack 2
@@ -84,6 +85,7 @@ If you did not enable Electron support, the dest folder is `./dist`, otherwise i
 │    └── [...other bundled files]  
 ├── tests           # e2e tests written by testcafe 
 ├── node_modules    # dependencies
+├── firebase.json   # firebase configuration
 └── package.json    # package info
 ```
 
