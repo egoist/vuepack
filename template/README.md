@@ -30,17 +30,39 @@ $ npm run lint
 
 {{/if}}
 
-## Firebase Deployment 
+## Deployment
+
+The deployment can be automatically run, in able to do so you have to install [firebase-tools](#firebase-installation).
+
+Then you can simply run
+
+```
+yarn deploy
+```
+
+
+## Firebase Installation 
 
 Install `firebase-tools` globally
 ```
 npm install -g firebase-tools
 ```
 
+Login to your Google Account
+```
+firebase login
+```
+
 To initialize the Firebase project
 ```
 firebase init
 ```
+
+When you already have a project, run the `use` command
+```
+firebase use [project_id]
+```
+
 
 
 
