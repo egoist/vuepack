@@ -6,7 +6,8 @@
     "cors": "^2.8.4",
     "express": "^4.16.1",
     "firebase-admin": "~4.1.2",
-    "firebase-functions": "^0.7.3"
+    "firebase-functions": "^0.7.3",
+    "body-parser": "^1.18.2"
   },
   "private": true
 }

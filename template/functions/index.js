@@ -1,4 +1,5 @@
 'use strict';
+import { https } from 'firebase-functions'
 
 import express from 'express'
 import bodyParser from 'body-parser'
@@ -19,4 +20,4 @@ app.get('/', (req, res) => {
 })
 
 // Expose the API as a function
-exports.api = functions.https.onRequest(app);
+exports.api = https.onRequest(app);

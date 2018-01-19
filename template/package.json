@@ -16,6 +16,7 @@
     "deploy-functions": "yarn package-functions && yarn postpackage-functions && firebase deploy --only functions",
     "deploy-firebase-services": "firebase deploy --only database,storage",
     {{/functions}}
+    "deploy-hosting": "yarn build && firebase deploy --only hosting",
     "cleanup-build": "rimraf {{#functions}}functions-dist &&{{/functions}} rimraf dist",
     "deploy": "yarn {{#functions}}deploy-functions && yarn deploy-firebase-services &&{{/functions}}yarn deploy-hosting && yarn cleanup-build"
   },

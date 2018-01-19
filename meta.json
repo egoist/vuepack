@@ -36,7 +36,7 @@
     },
     "functions": {
       "type": "confirm",
-      "message": "Add Firebase Http functions, including storage & database?",
+      "message": "Add Firebase functions, storage & database?",
       "default": true
     }
   },
