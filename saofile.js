@@ -57,11 +57,12 @@ module.exports = {
           '.eslintrc': 'eslint',
           'test/e2e/*': 'testcafe'
         },
+        transformExclude: 'build/index.html'
       }
     ]
   },
   async completed() {
-    const { log: logger, gitInit, npmInstall, chalk, isNewFolder, folderName } = this
+    const { logger, gitInit, npmInstall, chalk, isNewFolder, folderName } = this
 
     gitInit()
     await npmInstall()
