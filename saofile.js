@@ -62,15 +62,15 @@ module.exports = {
     ]
   },
   async completed() {
-    const { logger, gitInit, npmInstall, chalk, isNewFolder, folderName } = this
+    const { logger, gitInit, npmInstall, chalk, isNewFolder, outFolder } = this
 
-    gitInit()
-    await npmInstall()
+    gitInit.call(this)
+    await npmInstall.call(this)
 
-    logger.success(`Your new Vue project has been successfully generated in ${chalk.underline(folderName)}!`)
+    logger.success(`Your new Vue project has been successfully generated in ${chalk.underline(outFolder)}!`)
     console.log()
     console.log(chalk.bold(`  To get started:\n`))
-    if (isNewFolder) console.log(`  cd ${folderName}`)
+    console.log(`  cd ${outFolder}`)
     console.log(`  yarn`)
     console.log(`  yarn dev\n`)
     console.log(chalk.bold(`  To build for production:\n`))
