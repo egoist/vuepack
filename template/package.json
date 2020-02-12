@@ -7,7 +7,7 @@
     <% if (testcafe) { %>"test": "testcafe all test/e2e/index.js --app \"npm run dev\" --app-init-delay 10000"<% } %>,
     "build": "webpack --config build/webpack.prod.js",
     "dev": "node build/server.js"<% if (electron) { %>,
-    "app": "cross-env NODE_ENV=development electron app/"<% } %><% if (eslint) { &>,
+    "app": "cross-env NODE_ENV=development electron app/"<% } %><% if (eslint) { %>,
     "lint": "xo **/client/**/*.{vue,js}<% if (electron) { %> **/app/**/*.js<% } %> !node_modules/**"
     <% } %>
   },
@@ -51,7 +51,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.23.1",
     "cross-env": "^2.0.0",
-    <% if (electron) { %>}
+    <% if (electron) { %>
     "electron-devtools-installer": "^2.0.1",
     "electron": "^1.4.2",
     <% } %>

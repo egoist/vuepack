@@ -9,10 +9,10 @@ $ npm install
 To develop:
 
 ```bash
-$ npm run dev<% if (electron) {>
+$ npm run dev<% if (electron) { %>
 # in a new tab, run electron app
 $ npm run app
-<% } $>
+<% } %>
 ```
 
 To build for production:
@@ -21,7 +21,7 @@ To build for production:
 $ npm run build
 ```
 
-<% if (eslint) {>
+<% if (eslint) { %>
 To lint you code:
 
 ```bash

@@ -32,7 +32,7 @@ Check out [the docs](https://github.com/egoist/vuepack/tree/master/docs) for mor
 
 ## Get Started
 
-You'd better have `node >=4` and `npm >=3` installed:
+You'd better have `node >=10` and `npm >=6` installed:
 
 ## sao
 
@@ -49,7 +49,7 @@ sao egoist/vuepack new-project
 ## vue-cli
 
 ```bash
-$ npm install -g vue-cli
+$ npm install -g @vue/cli @vue/cli-init
 $ vue init egoist/vuepack new-project
 $ cd new-project
 $ npm install
