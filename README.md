@@ -46,23 +46,6 @@ sao vuepack new-project
 sao egoist/vuepack new-project
 ```
 
-## vue-cli
-
-```bash
-$ npm install -g @vue/cli @vue/cli-init
-$ vue init egoist/vuepack new-project
-$ cd new-project
-$ npm install
-
-# edit files and start developing
-$ npm run dev
-# bundle all scripts and styles for production use
-$ npm run build
-
-# lint your code
-$ npm run lint
-```
-
 ### For Windows users
 
 Install `git with unix tools` before getting started.
