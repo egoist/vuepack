@@ -1,0 +1,48 @@
+{
+  "prompts": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "message": "Project name"
+    },
+    "description": {
+      "type": "string",
+      "required": false,
+      "message": "Project description",
+      "default": "My Superb Vue Project"
+    },
+    "author": {
+      "type": "string",
+      "message": "Author"
+    },
+    "eslint": {
+      "type": "confirm",
+      "message": "Do you want to use ESLint?"
+    },
+    "jsx": {
+      "type": "confirm",
+      "message": "Generate components in JSX format?",
+      "default": false
+    },
+    "electron": {
+      "type": "confirm",
+      "message": "Support Electron?",
+      "default": false
+    },
+    "testcafe": {
+      "type": "confirm",
+      "message": "Add testcafe to run integration tests?",
+      "default": false
+    }
+  },
+  "filters": {
+    "client/components/*.vue": "!jsx",
+    "client/components/**/*.{js,css}": "jsx",
+    "client/views/*.vue": "!jsx",
+    "client/views/**/*.{js,css}": "jsx",
+    "app/*": "electron",
+    ".eslintrc": "eslint",
+    "test/e2e/*": "testcafe"
+  },
+  "completeMessage": "To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{#electron}}\n\nIn another tab:\n\n  npm run app{{/electron}}"
+}

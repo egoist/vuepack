@@ -1,11 +1,12 @@
 module.exports = {
+  transformer: 'handlebars',
   prompts() {
     return [
       {
         name: 'name',
         required: true,
         message: 'Project name',
-        role: 'folder:name'
+        default: this.outFolder
       },
       {
         name: 'description',
@@ -16,7 +17,7 @@ module.exports = {
       {
         name: 'author',
         message: 'Author',
-        default: '{gitUser:name}'
+        default: this.gitUser.name
       },
       {
         name: 'eslint',
@@ -62,7 +63,7 @@ module.exports = {
     ]
   },
   async completed() {
-    const { logger, gitInit, npmInstall, chalk, isNewFolder, outFolder } = this
+    const { logger, gitInit, npmInstall, chalk, outFolder } = this
 
     gitInit.call(this)
     await npmInstall.call(this)

@@ -2,3 +2,61 @@
 # yarn lockfile v1
 
 
+commander@~2.20.3:
+  version "2.20.3"
+  resolved "https://registry.npm.taobao.org/commander/download/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
+  integrity sha1-/UhehMA+tIgcIHIrpIA16FMa6zM=
+
+handlebars@^4.0.1:
+  version "4.7.3"
+  resolved "https://registry.npm.taobao.org/handlebars/download/handlebars-4.7.3.tgz?cache=0&sync_timestamp=1580879621042&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhandlebars%2Fdownload%2Fhandlebars-4.7.3.tgz#8ece2797826886cf8082d1726ff21d2a022550ee"
+  integrity sha1-js4nl4Johs+AgtFyb/IdKgIlUO4=
+  dependencies:
+    neo-async "^2.6.0"
+    optimist "^0.6.1"
+    source-map "^0.6.1"
+  optionalDependencies:
+    uglify-js "^3.1.4"
+
+jstransformer-handlebars@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npm.taobao.org/jstransformer-handlebars/download/jstransformer-handlebars-1.1.0.tgz#91ba56e0a28aee31bb56d4adbcbce508d8230468"
+  integrity sha1-kbpW4KKK7jG7VtStvLzlCNgjBGg=
+  dependencies:
+    handlebars "^4.0.1"
+
+minimist@~0.0.1:
+  version "0.0.10"
+  resolved "https://registry.npm.taobao.org/minimist/download/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
+  integrity sha1-3j+YVD2/lggr5IrRoMfNqDYwHc8=
+
+neo-async@^2.6.0:
+  version "2.6.1"
+  resolved "https://registry.npm.taobao.org/neo-async/download/neo-async-2.6.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fneo-async%2Fdownload%2Fneo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
+  integrity sha1-rCetpmFn+ohJpq3dg39rGJrSCBw=
+
+optimist@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.npm.taobao.org/optimist/download/optimist-0.6.1.tgz#da3ea74686fa21a19a111c326e90eb15a0196686"
+  integrity sha1-2j6nRob6IaGaERwybpDrFaAZZoY=
+  dependencies:
+    minimist "~0.0.1"
+    wordwrap "~0.0.2"
+
+source-map@^0.6.1, source-map@~0.6.1:
+  version "0.6.1"
+  resolved "https://registry.npm.taobao.org/source-map/download/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+  integrity sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
+
+uglify-js@^3.1.4:
+  version "3.7.7"
+  resolved "https://registry.npm.taobao.org/uglify-js/download/uglify-js-3.7.7.tgz?cache=0&sync_timestamp=1580771468559&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuglify-js%2Fdownload%2Fuglify-js-3.7.7.tgz#21e52c7dccda80a53bf7cde69628a7e511aec9c9"
+  integrity sha1-IeUsfczagKU7983mliin5RGuyck=
+  dependencies:
+    commander "~2.20.3"
+    source-map "~0.6.1"
+
+wordwrap@~0.0.2:
+  version "0.0.3"
+  resolved "https://registry.npm.taobao.org/wordwrap/download/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
+  integrity sha1-o9XabNXAvAAI03I0u68b7WMFkQc=

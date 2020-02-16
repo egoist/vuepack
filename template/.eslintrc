@@ -1,6 +1,6 @@
 {
-  "extends": "vue",<% if (testcafe) { %>
-  "plugins": ["testcafe"],<% } %>
+  "extends": "vue",{{#if testcafe}}
+  "plugins": ["testcafe"],{{/if}}
   "rules": {
     "import/no-unresolved": 0,
     "import/no-unassigned-import": 0

@@ -7,7 +7,6 @@
 
 I highly recommend you to try [Poi](https://github.com/egoist/poi), you can develop Vue.js app with no-config until you need it. Less boilerplate code, more happiness ❤️
 
-
 Here's the plan for [VuePack 4.0](https://github.com/egoist/vuepack/issues/136), you can support my work by [donating](https://github.com/egoist/donate) or joining the development.
 
 ## Features
@@ -15,13 +14,13 @@ Here's the plan for [VuePack 4.0](https://github.com/egoist/vuepack/issues/136),
 - Vue 2 / Vue-router / Vuex
 - Hot reloading for single-file components
 - Split vendor code from your app
-- Webpack 2
+- Webpack 2 (an update to Webpack 4 will be very soon)
 - [Offline Ready, perfect for progressive web app](/docs/pwa.md)
 - [ESLint](/docs/eslint.md)
 - [Babel 6](/docs/babel.md)
 - [PostCSS](/docs/postcss.md)
 - [JSX components are supported by default](/docs/jsx.md)
-- [TestCafe](/docs/testcafe.md)
+- [TestCafe](/docs/testcafe.md) (optional)
 - [Electron support](/docs/electron.md) (optional)
 - [CSS modules](/docs/css-modules.md) (optional)
 - A boilerplate which is small and focusing on client-side apps
@@ -36,14 +35,22 @@ You'd better have `node >=10` and `npm >=6` installed:
 
 ## sao
 
-This template can be used with [sao](https://github.com/egoist/sao), which also means you can use the template offline:
+This template can be used with [SAO](https://github.com/egoist/sao), which also means you can use the template offline:
 
 ```bash
-yarn global add sao
+npm i -g sao jstransformer-handlebars
 # from npm
 sao vuepack new-project
 # or git repo
 sao egoist/vuepack new-project
+```
+
+## Vue CLI
+
+Vue CLI (`vue-cli@2` or `@vue/cli@>=3` + `@vue/cli-init`) is still supported, but it has been deprecated by Vue officially, so it is not recommended to use Vue CLI with Vuepack.
+```bash
+npm i -g @vue/cli @vue/cli-init
+vue init egoist/vuepack
 ```
 
 ### For Windows users
