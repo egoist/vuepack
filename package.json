@@ -1,14 +1,24 @@
 {
-  "name": "template-vuepack",
+  "name": "sao-vuepack",
   "scripts": {
     "test": "echo lol"
   },
-  "dependencies": {},
-  "version": "3.3.1",
+  "dependencies": {
+    "jstransformer-handlebars": "^1.1.0"
+  },
+  "version": "4.0.0-pre1",
   "repository": {
-    "url": "git@github.com:egoist/vuepack.git",
+    "url": "git+https://github.com/egoist/vuepack.git",
     "type": "git"
   },
   "author": "EGOIST <0x142857@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "VuePack is a modern Vue.js starter",
+  "bugs": {
+    "url": "https://github.com/egoist/vuepack/issues"
+  },
+  "homepage": "https://github.com/egoist/vuepack#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com"
+  }
 }

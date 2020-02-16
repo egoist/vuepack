@@ -1,17 +1,17 @@
 {
-  "name": "{{ name }}",
+  "name": "{{name}}",
   "version": "0.1.0",
-  "description": "{{ description }}",
+  "description": "<%= description %>",
   "main": "client/index.js",
   "scripts": {
-    "test": "{{#testcafe}}testcafe all test/e2e/index.js --app \"npm run dev\" --app-init-delay 10000{{/testcafe}}",
+    {{#if testcafe}}"test": "testcafe all test/e2e/index.js --app \"npm run dev\" --app-init-delay 10000",{{/if}}
     "build": "webpack --config build/webpack.prod.js",
-    "dev": "node build/server.js"{{#electron}},
-    "app": "cross-env NODE_ENV=development electron app/"{{/electron}}{{#eslint}},
-    "lint": "xo **/client/**/*.{vue,js}{{#electron}} **/app/**/*.js{{/electron}} !node_modules/**"
-    {{/eslint}}
+    "dev": "node build/server.js"{{#if electron}},
+    "app": "cross-env NODE_ENV=development electron app/"{{/if}}{{#if eslint}},
+    "lint": "xo **/client/**/*.{vue,js}{{#if electron}} **/app/**/*.js{{/if}} !node_modules/**"
+    {{/if}}
   },
-  "author": "{{ author }}",
+  "author": "{{author}}",
   "license": "MIT",
   "xo": {
     "extends": "./.eslintrc",
@@ -51,18 +51,18 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.23.1",
     "cross-env": "^2.0.0",
-    {{#electron}}
+    {{#if electron}}
     "electron-devtools-installer": "^2.0.1",
     "electron": "^1.4.2",
-    {{/electron}}
-    {{#eslint}}
+    {{/if}}
+    {{#if eslint}}
     "xo": "^0.18.0",
     "eslint-config-vue": "latest",
     "eslint-plugin-vue": "latest",
-    {{#testcafe}}
+    {{#if testcafe}}
     "eslint-plugin-testcafe": "^0.2.0",
-    {{/testcafe}}
-    {{/eslint}}
+    {{/if}}
+    {{/if}}
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "^0.9.0",
@@ -74,9 +74,9 @@
     "postcss-nested": "^1.0.0",
     "rimraf": "^2.6.1",
     "style-loader": "^0.13.1",
-    {{#testcafe}}
+    {{#if testcafe}}
     "testcafe": "^0.12.1",
-    {{/testcafe}}
+    {{/if}}
     "vue-loader": "^11.0.0",
     "vue-template-compiler": "^2.2.0",
     "webpack": "2.2.0",
